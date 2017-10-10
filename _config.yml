@@ -76,8 +76,10 @@ theme: prontera
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type:
+deploy: 
+  type: git
+  repo: https://github.com/vdorchan/vdorchan.github.io.git
+  branch: master
 
 # Show all articles on archive page
 archive_generator:
