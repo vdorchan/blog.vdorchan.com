@@ -1,7 +1,7 @@
 ---
-title: ES6学习笔记-正则表达式
+title: ES6学习笔记-正则的扩展
 date: 2017-10-13 15:56:52
-tags:
+tags: ES6 ES6学习笔记 学习 正则
 ---
 正则一直是块难啃的骨头，乍一看就好复杂，各种符号字母交叉也不知道什么意思。编写一个正则，使用的时候是需要适应多种情况的，所以在掌握的不够深的时候，可能写出来的正则就容易出问题了。于是乎，大家就更倾向于复制粘贴大法咯，毕竟有些通用的正则，是能保证正确且足够可靠的。除了校验手机号码、邮箱这些常用的功能之外，其实正则是足够强大应用在很多方面的。正则很深奥，同时又很枯燥，要学好正则，可谓任重而道远啊。
 
@@ -246,4 +246,76 @@ const regex = /^\p{Number}+$/u
 
 // 匹配所有的箭头字符
 const regexArrows = /^\p{Block=Arrows}+$/u
+```
+## 10. * 具名组匹配
+先来看一个分组匹配的例子
+```javascript
+const RE_DATE = /(\d{4})-(\d{2})-(\d{2})/
+
+const matchObj = RE_DATE.exec('2017-10-18')
+const year = matchObj[0]
+const month = matchObj[1]
+const day = matchObj[2]
+```
+上面代码每一组的匹配是通过序号来获取的，如果组的顺序变了，引用的时候，还要更改序号。另外，每一组的匹配含义也不容易看出来。
+
+现在则有个“具名组匹配”（Named Capture Groups）的提案，允许为每一组匹配指定一个名字，既便于阅读，又便于引用。
+
+“具名组匹配”在圆括号内部，模式的头部添加“问号 + 尖括号 + 组名”（?<year>）。然后就可以在exec方法返回结果的groups属性上引用该组名。同时，数字序号（matchObj[1]）依然有效。
+```javascript
+const RE_DATE = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/
+
+const matchObj = RE_DATE.exec('2017-10-18')
+const year = matchObj.groups.year
+const month = matchObj.groups.month
+const day = matchObj.groups.day
+```
+如果具名组没有匹配，那么对应的 groups 对象属性会是 undefined。
+
+** 解构赋值和替换 ** 
+利用具名组匹配可以使用解构赋值从匹配结果中为变量赋值。
+```javascript
+const {group: {one, two}} = /^(?<one>.*):(?<two>.*)/.exec('bar:foo')
+
+one // bar
+two // foo
+```
+
+字符串替换时，可以使用 $<组名> 引用具名组。
+```javascript
+const r = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/
+'2017-10-18'.replace(r, '$<day>/$<month>/$<year>') // 18/10/2017
+```
+
+replace 方法的第二个参数可以是函数。
+```javascript
+const r = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/
+
+'2017-10-18'.replace(r, (
+  matched, // 整个匹配结果
+  capture1, //第一个组匹配
+  capture2, //第二个组匹配
+  capture3, //第三个组匹配
+  position, // 匹配开始的位置 0
+  S, // 原字符串
+  groups // 具名组构成的一个对象 {year, month, day}
+) => {
+  let groups = {day, month, year} = arg[args.length - 1]
+  return `${day}/${month}/${year}`
+}
+```
+具名组匹配在原来的基础上，新增了最后一个函数参数：具名组构成的一个对象，函数内部可以对其解构赋值。
+
+** 引用　**
+如果要在正则表达式内部引用某个“具名组匹配”，可以使用 \k<组名>　的写法
+```javascript
+const r = /(?<word>\w+)!\k<word>/
+r.test('abc!abc') // true
+r.test('abc!ab') // false
+```
+数字引用　\1　也依然有效
+```javascript
+const r = /(?<word>\w+)!\1/
+r.test('abc!abc') // true
+r.test('abc!ab') // false
 ```
