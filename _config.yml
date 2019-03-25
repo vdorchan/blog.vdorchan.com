@@ -78,8 +78,17 @@ theme: prontera
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 
   type: git
-  repo: https://github.com/vdorchan/vdorchan.github.io.git
-  branch: master
+  # repo: https://github.com/vdorchan/vdorchan.github.io.git
+  repo: git@vdorchan.com:hexo.git
+# deploy:
+#   type: rsync
+#   host: vdorchan.com
+#   user: vdorchan
+#   root: <root>
+#   port: [port]
+#   delete: [true|false]
+#   verbose: [true|false]
+#   ignore_errors: [true|false]
 
 # Show all articles on archive page
 archive_generator:
