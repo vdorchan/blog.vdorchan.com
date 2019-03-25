@@ -10,8 +10,8 @@ install:
 - git clone https://github.com/pinggod/hexo-theme-prontera themes/prontera
 script:
 - hexo generate && hexo deploy
-before_install:
-- openssl aes-256-cbc -K $encrypted_6403ad562fd3_key -iv $encrypted_6403ad562fd3_iv
-  -in id_rsa.enc -out ~/.ssh/id_rsa -d
 addons:
   ssh_known_hosts: blog.vdorchan.com
+before_install:
+- openssl aes-256-cbc -K $encrypted_6403ad562fd3_key -iv $encrypted_6403ad562fd3_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
