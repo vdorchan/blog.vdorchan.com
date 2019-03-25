@@ -79,7 +79,7 @@ theme: prontera
 deploy: 
   type: git
   # repo: https://github.com/vdorchan/vdorchan.github.io.git
-  repo: git@vdorchan.com:hexo.git
+  repo: git@blog.vdorchan.com:hexo.git
 # deploy:
 #   type: rsync
 #   host: vdorchan.com
