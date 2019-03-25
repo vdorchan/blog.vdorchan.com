@@ -11,7 +11,7 @@ install:
 script:
 - hexo generate && hexo deploy
 before_install:
-- openssl aes-256-cbc -K $encrypted_0cfc4250ac0a_key -iv $encrypted_0cfc4250ac0a_iv
+- openssl aes-256-cbc -K $encrypted_6403ad562fd3_key -iv $encrypted_6403ad562fd3_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 addons:
   ssh_known_hosts: blog.vdorchan.com
