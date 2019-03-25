@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- 6
+branches:
+  only:
+  - master
+install:
+- npm install hexo-cli -g
+- npm install
+- git clone https://github.com/pinggod/hexo-theme-prontera themes/prontera
+script:
+- hexo generate && hexo deploy
+before_install:
+- openssl aes-256-cbc -K $encrypted_0cfc4250ac0a_key -iv $encrypted_0cfc4250ac0a_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+addons:
+  ssh_known_hosts: blog.vdorchan.com
