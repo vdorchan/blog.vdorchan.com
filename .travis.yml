@@ -9,9 +9,15 @@ install:
 - npm install
 - git clone https://github.com/pinggod/hexo-theme-prontera themes/prontera
 script:
-- hexo generate && hexo deploy
+- hexo clean && hexo g -d
 addons:
   ssh_known_hosts: blog.vdorchan.com
 before_install:
 - openssl aes-256-cbc -K $encrypted_6403ad562fd3_key -iv $encrypted_6403ad562fd3_iv
-  -in id_rsa.enc -out ~/.ssh/id_rsa -d
+  -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
+- git config --global user.name 'vdorchan'
+- git config --global user.email vdorchan@gmail.com
