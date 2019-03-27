@@ -312,6 +312,78 @@ function instance_of (L, R) { //L 表示左表达式，R 表示右表达式
 }
 ```
 
+## 类
+
+ECMAScript 2015 中引入的 JavaScript 类实质上是 JavaScript 现有的基于原型的继承的语法糖。类语法不会为JavaScript引入新的面向对象的继承模型。
+
+类实际上是个“特殊的函数”，就像你能够定义的函数表达式和函数声明一样，类语法有两个组成部分：类表达式和类声明。
+
+1、类声明
+
+使用 calss 关键字来声明，虽然**函数声明**会提升，但**类声明**并不会。
+
+```javascript
+class Person {
+  constructor (name) {
+    this.name = name
+  }
+}
+```
+
+2、类表达式
+
+```javascript
+/* 匿名类 */
+let Person = class Person {
+  constructor (name) {
+    this.name = name
+  }
+}
+
+/* 声明的类 */
+let Person = class Person {
+  constructor (name) {
+    this.name = name
+  }
+}
+```
+
+> 一个类的类体是一对花括号/大括号 {} 中的部分。这是你定义类成员的位置，如方法或构造函数。
+> 类声明和类表达式的主体都执行在严格模式下。比如，构造函数，静态方法，原型方法，`getter`和`setter`都在严格模式下执行。
+> `constructor` 方法是一个特殊的方法，这种方法用于创建和初始化一个由 `class `创建的对象。一个类只能拥有一个名为 “constructor”的特殊方法。如果类包含多个`constructor`的方法，则将抛出 一个`SyntaxError` 。
+> 一个构造函数可以使用 super 关键字来调用一个父类的构造函数
+> static 关键字用来定义一个类的一个静态方法。
+> 使用 extends 创建子类
+
+下面是使用 `class` 的例子
+
+```javascript
+class Person {
+  constructor (name) {
+    this.name = name
+  }
+
+  say () {
+    console.log(`I am ${this.name}`)
+  }
+}
+
+class Student extends Person {
+  /* 如果没有显式指定构造方法，则会添加默认的 constructor 方法。 */
+  constructor (name) {
+    super(name)
+  }
+
+  study () {
+    console.log('I am studing')
+  }
+}
+
+const curry = new Student('curry')
+curry.say() // I am curry
+curry.study() // I am studing
+```
+
 ## 性能
 
 在原型链上查找属性比较耗时，对性能有副作用，这在性能要求苛刻的情况下很重要。另外，试图访问不存在的属性时会遍历整个原型链。
