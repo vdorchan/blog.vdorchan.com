@@ -84,6 +84,8 @@ Before continuing, verify the record is deployed.
 
 我使用的域名服务器是 GoDaddy，配置如下图：
 
+[![image.png](https://i.postimg.cc/t4Tkh6N1/image.png)](https://postimg.cc/dLbGFLXv)
+
 然后本地可以使用 dig 命令来确认记录是否生效
 
 ```bash
