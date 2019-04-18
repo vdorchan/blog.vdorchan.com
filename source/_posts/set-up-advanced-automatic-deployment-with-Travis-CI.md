@@ -8,7 +8,7 @@ tags:
 
 写代码经常要花很多时间在构建和部署上面，像是我的个人网站、博客系统或者是一些小项目，每次有些改动就得去重新构建生产代码，改完之后还要把它弄上服务器，更新到线上去。
 
-项目一多，改动一多，于是乎懒惰的我，就会把它“堆起来”，等一个比较长的开发周期结束之后，再去更新线上。虽然这样减少了更新的次数，但依然是耗费时间。有一天我觉得身为高贵的程序员不能再总是亲手干这种活了，必须要找个苦力给我搞定它。
+项目一多，改动一多，懒惰的我，就会把它“堆起来”，等一个比较长的开发周期结束之后，再去更新线上。虽然这样减少了更新的次数，但依然还是又累又耗费时间。身为高贵的程序员不能再总是浪费生命干这种活了，必须要找个苦力给我搞定它。
 
 通过 Google 发现 Travis CI 是最合适的选择。
 
@@ -20,7 +20,7 @@ CI 即*持续集成服务*，是 Continuous Integration 的简称，而 Travis C
 
 持续集成就是在团队开发的时候，成员们持续（频繁）将代码改动集成到主干上去。而每次集成都是通过自动化的构建（包括编译，发布，自动化测试）来验证。
 
-持续集成的好处在于，每次代码的小幅变更，就能看到运行结果，从而也能尽早的发现集成错误。这样子就能不断累积小的变更，而不是在开发周期结束时，一下子合并一大块代码。
+持续集成的好处在于，每次代码的小幅变更，就能看到运行pt addo结果，从而也能尽早的发现集成错误。这样子就能不断累积小的变更，而不是在开发周期结束时，一下子合并一大块代码。
 
 Travis CI 和 Github 账号绑定，你可以选择需要持续集成的项目，之后只要这个项目有代码变动，就会自动抓取，然后提供一个运行环境，执行测试，完成构建，然后也能部署到服务器上去。
 
@@ -39,8 +39,8 @@ script: true
 
 Travis CI 的完整生命周期为（参考[官方文档](https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle)）：
 
-1. 可选的 Install `apt addons`
-2. 可选的 Install c`ache components`
+1. 可选的 `Install apt addons`
+2. 可选的 `Install cache components`
 3. `before_install`
 4. `install`
 5. `before_script`
@@ -50,7 +50,7 @@ Travis CI 的完整生命周期为（参考[官方文档](https://docs.travis-ci
 9. 可选的 `before_deploy`
 10. 可选的 `deploy`
 11. 可选的 `after_deploy`
-12. after_script
+12. `after_script`
 
 > 注意当使用 `install` 指定脚本的时候，要确保使用 `chmod +x` 给予可执行的权限。
 
@@ -66,23 +66,22 @@ script:
   - command2
 ```
 
-`install` 指定的脚本如果有多个，如果前面有脚本执行失败，构建就会停下来并标记为错误，不再往下进行。
+`install` 指定的脚本如果有多个，然后前面有脚本执行失败，构建就会停下来并标记为错误，不再往下进行。
 
-而 `script` 则是继续执行后面的脚本，如果你想要在第一个命令失败时不要执行第二个命令，你可以这么写
+而 `script` 则是会继续执行后面的脚本，如果你想要在第一个命令失败时不要执行第二个命令，你可以这么写
 
 ```YAML
 script:
-  - command1
-  - command2
+  - command1 && command2
 ```
 
 ## 构建失败
 
-* 如果 `before_install`, `install` 或者 `before_script` 返回一个非 0 的退出代码，构建会报错并且立刻中断。
+* 如果 `before_install`, `install` 或者 `before_script` 返回一个非 0 的退出代码（exited code），构建会报错并且立刻中断。
 
-* 如果 `script` 返回一个非 0 的退出代码，会在整个 `script` 流程结束后标记会构建失败，在这之前，即使前面命令报错，后面命令也会继续执行。
+* 如果 `script` 返回一个非 0 的退出代码（exited code），会在整个 `script` 流程结束后标记会构建失败，在这之前，即使前面命令报错，后面命令也会继续执行。
 
-* `after_success`, `after_failure`, `after_script`, `after_deploy` 和后面的流程不会影响构建结果，但是如果其中又一个流程超时了，构建会被标记会失败。
+* `after_success`, `after_failure`, `after_script`, `after_deploy` 和后面的流程不会影响构建结果，但是如果其中有一个流程超时了，构建会被标记会失败。
 
 ## 部署 Vue Spa
 
@@ -92,7 +91,7 @@ script:
 
 1. 本地通过 `yarn serve` 开发代码
 2. 代码开发调试没问题后，执行 `yarn build` 构建生产代码并 `git push` 到 Github 上
-3. 只用同步命令 rsync 部署到线上（这里省略 ssh 验证步骤）
+3. 用 rsync（一个远程数据同步工具）部署到线上（这里省略 ssh 验证步骤）
 
 现在我要让 CI 服务帮我做 2 和 3
 
@@ -115,6 +114,7 @@ script:
 - rsync -avu --progress --delete dist/ root@vdorchan.com:/srv/www/proj.vdorchan.com/vue-movie/
 ```
 
+rsync 部分选项
 > rsync [OPTION]... SRC DEST
 > -a, --archive 归档模式，表示以递归方式传输文件，并保持所有文件属性
 > -v, --verbose 详细模式输出
@@ -122,7 +122,7 @@ script:
 > --progress 显示备份过程
 > --delete 删除那些DST中SRC没有的文件
 
-上面的 rsync 命令将项目的 dist 目录和远程服务器上的 /srv/www/proj.vdorchan.com/vue-movie/ 目录进行同步，远程服务器地址为 vdorchan.com
+上面的 rsync 命令将项目的 dist 目录和远程服务器上的 `/srv/www/proj.vdorchan.com/vue-movie/` 目录进行同步，远程服务器地址为 vdorchan.com
 
 ### ssh
 
@@ -160,9 +160,11 @@ cat id_rsa.pub
 vi ~/.ssh/authorized_keys
 ```
 
+当然你也可以用更高端大气的方式，比如使用 `scp` 等等。
+
 ### travis 加密文件
 
-在 CI 环境里要想和服务器通信，那么就要把私钥放到 CI 环境里，但前面说过，私钥不能泄露，所以也就不能直接放在 github仓库里，travis CI 官方提供了加密文件的工具。
+在 CI 环境里要想和服务器通信，那么就要把私钥放到 CI 环境里，但前面说过，私钥不能泄露，所以也就不能直接放在 github仓库里。我们要利用 travis CI 官方提供的加密文件的工具来进行加密。
 
 首先需要安装 travis 命令行工具，Mac os 用户可以直接使用 brew 安装
 
@@ -173,7 +175,7 @@ brew install travis
 gem install travis
 ```
 
-可参考[官方仓库](https://github.com/travis-ci/travis.rb)
+安装如有问题，可参考[官方仓库](https://github.com/travis-ci/travis.rb)
 
 在项目目录下，使用 travis 的加密文件功能，将私钥进行加密。
 
@@ -211,7 +213,7 @@ ECDSA key fingerprint is 60:9c:a8:53:07:52:b9:b4:9f:fb:a2:57:53:be:5e:00.
 Are you sure you want to continue connecting
 ```
 
-因为 CI 是不运行交互式提示的，所以要阻止它询问
+因为 CI 是自动化的，如果有交互式提示就无法进行下去来，所以要阻止它询问
 
 ```YAML
 addons:
@@ -237,4 +239,4 @@ before_install:
 
 完成上述的操作之后，你的代码应该就能自动化的部署了。不是很难，确保每个步骤无误，就肯定没问题了。如果还有问题，可以 Google、看官方文档，也可以问我。
 
-代码可见 [vue-movie](https://github.com/vdorchan/vue-movie)
+代码可见 [https://github.com/vdorchan/vue-movie](https://github.com/vdorchan/vue-movie)
