@@ -7,7 +7,6 @@ branches:
 install:
 - npm install hexo-cli -g
 - npm install
-- git clone https://github.com/AngryPowman/hexo-theme-prontera themes/prontera
 script:
 - hexo clean && hexo g -d
 addons:
