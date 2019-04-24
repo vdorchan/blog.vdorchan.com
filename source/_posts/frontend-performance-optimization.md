@@ -142,7 +142,7 @@ HTTP/2 的主要目标是通过支持完整的请求与响应复用来减少延�
 
 HTTP/2 没有改动 HTTP 的应用语义。 HTTP 方法、状态代码、URI 和标头字段等核心概念一如往常。 不过，HTTP/2 修改了数据格式化（分帧）以及在客户端与服务器间传输的方式。这两点统帅全局，通过新的分帧层向我们的应用隐藏了所有复杂性。 因此，所有现有的应用都可以不必修改而在新协议下运行。
 
-(HTTP/2 简介)[https://developers.google.com/web/fundamentals/performance/http2/]
+[HTTP/2 简介](https://developers.google.com/web/fundamentals/performance/http2/)
 
 **HTTP/2** 可解决 HTTP/1.1 的许多固有性能问题，例如并发请求限制和缺乏标头压缩。
 
