@@ -7,7 +7,7 @@ title: Cold Fire
 subtitle:
 description:
 author: vdorchan
-language:
+language: zh-CN
 timezone:
 
 # URL
@@ -39,6 +39,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
+  hljs: true # 添加这一行！
   line_number: true
   auto_detect: false
   tab_replace:
@@ -72,7 +73,22 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: prontera_
+theme: hueman
+
+# Hexo local search
+search:
+  path: search.xml
+  field: all
+
+  # Hexo feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
