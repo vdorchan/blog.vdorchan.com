@@ -1,7 +1,10 @@
 ---
-title: 学习 JavaScript 的闭包
+title: 学习 JavaScript 的闭包（翻译）
 date: 2017-12-13 15:00:00
-tags: 闭包
+tags: 
+  - JavaScript
+  - 翻译
+  - 闭包
 ---
 ## 1. 扩展运算符
 > 闭包（Closures）: 

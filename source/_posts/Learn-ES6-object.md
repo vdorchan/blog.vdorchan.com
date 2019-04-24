@@ -1,7 +1,10 @@
 ---
 title: Learn-ES6-object
 date: 2018-01-14 18:13:25
-tags:
+tags: 
+  - ES6
+  - 学习
+  - ES6学习笔记
 ---
 ## 1. 属性的简洁表示法
 

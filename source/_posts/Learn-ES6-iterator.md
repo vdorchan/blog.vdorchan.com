@@ -1,7 +1,11 @@
 ---
-title: Learn-ES6-iterator
+title: Learn-ES6-Iterator
 date: 2018-02-24 14:05:59
-tags:
+tags: 
+  - ES6
+  - 学习
+  - Iterator
+  - ES6学习笔记
 ---
 ## 1.Iterator（遍历器）
 

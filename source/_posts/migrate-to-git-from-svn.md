@@ -1,7 +1,10 @@
 ---
 title: 从 svn 迁移到 git，并保留 commit 日志
 date: 2018-11-09 15:22:13
-tags:
+tags: 
+  - Git
+  - Svn
+  - 工具
 ---
 
 之前为公司做了个基于 yeoman 的脚手架工具，公司是使用 svn 做版本控制的，所以这个工具也就使用了 svn 来记录版本。

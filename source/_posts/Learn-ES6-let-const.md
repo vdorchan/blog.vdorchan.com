@@ -1,7 +1,11 @@
 ---
 title: ES6学习笔记-let与const
 date: 2017-10-10 21:41:03
-tags: ES6 ES6学习笔记 学习 let const
+tags: 
+  - ES6
+  - 学习
+  - 变量
+  - ES6学习笔记
 ---
 ## 背景
 ES6 即 ECMAScript 6.0 的简称，是 JavaScript 的下一代标准，在2015年6月正式发布了。

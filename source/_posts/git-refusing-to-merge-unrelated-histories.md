@@ -1,7 +1,10 @@
 ---
 title: git 提示无法 pull 仓库（refusing-to-merge-unrelated-histories）
 date: 2018-11-12 17:31:14
-tags:
+tags: 
+  - git
+  - github
+  - 错误
 ---
 
 ## 背景

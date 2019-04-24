@@ -1,7 +1,9 @@
 ---
 title: JavaScript 实现二分搜索和快速排序
 date: 2019-04-22 16:33:39
-tags: 算法
+tags:
+  - 算法
+  - JavaScript
 ---
 
 ## 二分搜索
