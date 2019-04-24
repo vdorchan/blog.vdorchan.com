@@ -7,6 +7,7 @@ branches:
 install:
 - npm install hexo-cli -g
 - npm install
+- git clone git@github.com:vdorchan/hexo-theme-humeman.git themes/hueman
 script:
 - hexo clean && hexo g -d
 addons:
