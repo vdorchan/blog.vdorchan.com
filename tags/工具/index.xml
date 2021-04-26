@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工具 on Two Cold</title>
-    <link>http://example.org/tags/%E5%B7%A5%E5%85%B7/</link>
+    <link>https://vdorchan.github.io/tags/%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content in 工具 on Two Cold</description>
     <image>
       <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Apr 2019 10:32:01 +0000</lastBuildDate><atom:link href="http://example.org/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Apr 2019 10:32:01 +0000</lastBuildDate><atom:link href="https://vdorchan.github.io/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Travis-CI 完成高级的自动化部署</title>
-      <link>http://example.org/posts/set-up-advanced-automatic-deployment-with-travis-ci/</link>
+      <link>https://vdorchan.github.io/posts/set-up-advanced-automatic-deployment-with-travis-ci/</link>
       <pubDate>Thu, 18 Apr 2019 10:32:01 +0000</pubDate>
       
-      <guid>http://example.org/posts/set-up-advanced-automatic-deployment-with-travis-ci/</guid>
+      <guid>https://vdorchan.github.io/posts/set-up-advanced-automatic-deployment-with-travis-ci/</guid>
       <description>会啰嗦几句简单介绍下然后实战
  写代码经常要花很多时间在构建和部署上面，像是我的个人网站、博客系统或者是一些小项目，每次有些改动就得去重新构建生产代码，改完之后还要把它弄上服务器，更新到线上去。
 项目一多，改动一多，懒惰的我，就会把它“堆起来”，等一个比较长的开发周期结束之后，再去更新线上。虽然这样减少了更新的次数，但依然还是又累又耗费时间。身为高贵的程序员不能再总是浪费生命干这种活了，必须要找个苦力给我搞定它。
@@ -32,10 +32,10 @@ Travis CI 和 Github 账号绑定，你可以选择需要持续集成的项目�
     
     <item>
       <title>从 svn 迁移到 git，并保留 commit 日志</title>
-      <link>http://example.org/posts/migrate-to-git-from-svn/</link>
+      <link>https://vdorchan.github.io/posts/migrate-to-git-from-svn/</link>
       <pubDate>Fri, 09 Nov 2018 15:22:13 +0000</pubDate>
       
-      <guid>http://example.org/posts/migrate-to-git-from-svn/</guid>
+      <guid>https://vdorchan.github.io/posts/migrate-to-git-from-svn/</guid>
       <description>之前为公司做了个基于 yeoman 的脚手架工具，公司是使用 svn 做版本控制的，所以这个工具也就使用了 svn 来记录版本。
 近期想做个迁移，把它放到 github 上去，这里对迁移过程做个简单的记录。
 首先，svn 地址是 http://svn.com.cn/svn/generator-pczt/ （非真实 svn 地址，这里做个举例）

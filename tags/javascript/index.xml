@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JavaScript on Two Cold</title>
-    <link>http://example.org/tags/javascript/</link>
+    <link>https://vdorchan.github.io/tags/javascript/</link>
     <description>Recent content in JavaScript on Two Cold</description>
     <image>
       <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Apr 2019 10:44:48 +0000</lastBuildDate><atom:link href="http://example.org/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Apr 2019 10:44:48 +0000</lastBuildDate><atom:link href="https://vdorchan.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>前端性能优化与浏览器渲染</title>
-      <link>http://example.org/posts/frontend-performance-optimization/</link>
+      <link>https://vdorchan.github.io/posts/frontend-performance-optimization/</link>
       <pubDate>Tue, 23 Apr 2019 10:44:48 +0000</pubDate>
       
-      <guid>http://example.org/posts/frontend-performance-optimization/</guid>
+      <guid>https://vdorchan.github.io/posts/frontend-performance-optimization/</guid>
       <description>对性能优化的知识点做了些总结，如有纰漏，跪求批评指正。
  在我们共同推动网页实现更多功能的过程中，将遇到一个常见的问题：性能。 如今，网站拥有比以往更多的功能，以至于许多网站都将精力用于在各种网络条件和设备上提供更高的性能。
 不过，性能问题多种多样。轻微性能问题可能只会导致微弱的延迟，给您的用户带来短暂的不便。而严重的性能问题可能导致您的网站完全无法访问，无法对用户输入进行响应或两者同时发生。
@@ -31,10 +31,10 @@
     
     <item>
       <title>JavaScript 实现二分搜索和快速排序</title>
-      <link>http://example.org/posts/binary-search/</link>
+      <link>https://vdorchan.github.io/posts/binary-search/</link>
       <pubDate>Mon, 22 Apr 2019 16:33:39 +0000</pubDate>
       
-      <guid>http://example.org/posts/binary-search/</guid>
+      <guid>https://vdorchan.github.io/posts/binary-search/</guid>
       <description>二分搜索  在计算机科学中，二分搜索（binary search）是一种在有序数组中查找某一特定元素的搜索算法。搜索过程从数组的中间元素开始，如果中间元素正好是要查找的元素，则搜索过程结束；如果某一特定元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半中查找，而且跟开始一样从中间元素开始比较。如果在某一步骤数组为空，则代表找不到。这种搜索算法每一次比较都使搜索范围缩小一半
  利用递归实现
 /** * 二分查找，递归实现 * @param {*} arr * @param {*} target * @param {*} low * @param {*} high */ function binarySearch(arr, target, low = 0, high = arr.length - 1) { if (low &amp;gt; high) { return -1 } const mid = parseInt((low + high) / 2) if (target &amp;lt; arr[mid]) { return binarySearch(arr, target, low, mid - 1) } if (target &amp;gt; arr[mid]) { return binarySearch(arr, target, mid + 1, high) } return mid } 非递归实现</description>
@@ -42,10 +42,10 @@
     
     <item>
       <title>让人脑壳疼的继承与原型链</title>
-      <link>http://example.org/posts/interitance-and-the-prototype-chain/</link>
+      <link>https://vdorchan.github.io/posts/interitance-and-the-prototype-chain/</link>
       <pubDate>Wed, 27 Mar 2019 10:43:12 +0000</pubDate>
       
-      <guid>http://example.org/posts/interitance-and-the-prototype-chain/</guid>
+      <guid>https://vdorchan.github.io/posts/interitance-and-the-prototype-chain/</guid>
       <description>JavaScript 的继承是基于原型链实现的。虽然在 ES2015/ES6 中引入了class关键字，但那仅仅是语法糖。
 原型链是一种机制，指的是 JavaScript 每个对象都有一个内置的 __proto__ 属性指向创建它的构造函数的 prototype （原型）属性。
 比如
@@ -59,10 +59,10 @@ function f1 () {} var f2 = function (){} var f3 = new Function(&amp;#39;str&amp;
     
     <item>
       <title>学习 JavaScript 的闭包（翻译）</title>
-      <link>http://example.org/posts/learn-javascript-closures/</link>
+      <link>https://vdorchan.github.io/posts/learn-javascript-closures/</link>
       <pubDate>Wed, 13 Dec 2017 15:00:00 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-javascript-closures/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-javascript-closures/</guid>
       <description>1. 扩展运算符  闭包（Closures）: 闭包是指一个拥有很多变量和与这些变量绑定的环境的表达式（大多数时候是一个函数），这些变量也属于这个表达式。
  Closures are one of the most powerful features of ECMAScript (javascript) but they cannot be property exploited without understanding them. They are, however, relatively easy to create, even accidentally, and their creation has potentially harmful consequences, particularly in some relatively common web browser environments. To avoid accidentally encountering the drawbacks and to take advantage of the benefits they offer it is necessary to understand their mechanism.</description>
     </item>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HTTPS on Two Cold</title>
-    <link>http://example.org/tags/https/</link>
+    <link>https://vdorchan.github.io/tags/https/</link>
     <description>Recent content in HTTPS on Two Cold</description>
     <image>
       <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Apr 2019 12:12:28 +0000</lastBuildDate><atom:link href="http://example.org/tags/https/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Apr 2019 12:12:28 +0000</lastBuildDate><atom:link href="https://vdorchan.github.io/tags/https/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>通过 certbot 给网站部署 Let’s Encrypt SSL 安全证书</title>
-      <link>http://example.org/posts/deploy-lets-encrypt-ssl-certificate-with-certbot/</link>
+      <link>https://vdorchan.github.io/posts/deploy-lets-encrypt-ssl-certificate-with-certbot/</link>
       <pubDate>Mon, 01 Apr 2019 12:12:28 +0000</pubDate>
       
-      <guid>http://example.org/posts/deploy-lets-encrypt-ssl-certificate-with-certbot/</guid>
+      <guid>https://vdorchan.github.io/posts/deploy-lets-encrypt-ssl-certificate-with-certbot/</guid>
       <description>http 不安全 当部署完网站，你迫不及待打开 chrome，输入网站域名，敲下回撤，页面便展现在你的眼前。这时候可能会注意到域名的左边，赫然显示着“不安全”。这太难看了，没法忍。
 chrome 显示不安全的其中一个原因就是网站没有配置安全证书，使用的是 HTTP 而不是 HTTPS。
 http 是一个传输网页内容的协议，本身不带加密，是明文传输的。而 https 可以理解为“ HTTP over SSL/TLS ”，这是为了安全，为 http 协议上加了一层 SSL/TLS 安全协议。

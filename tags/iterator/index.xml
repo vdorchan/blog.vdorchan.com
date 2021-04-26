@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Iterator on Two Cold</title>
-    <link>http://example.org/tags/iterator/</link>
+    <link>https://vdorchan.github.io/tags/iterator/</link>
     <description>Recent content in Iterator on Two Cold</description>
     <image>
       <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Feb 2018 14:05:59 +0000</lastBuildDate><atom:link href="http://example.org/tags/iterator/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Feb 2018 14:05:59 +0000</lastBuildDate><atom:link href="https://vdorchan.github.io/tags/iterator/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learn-ES6-Iterator</title>
-      <link>http://example.org/posts/learn-es6-iterator/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-iterator/</link>
       <pubDate>Sat, 24 Feb 2018 14:05:59 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-iterator/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-iterator/</guid>
       <description>1.Iterator（遍历器） Javascript 现有的表示集合的数据结构，出了原本的对象（Object）和数组（Array），ES6 又增加了 Set 和 Map。Iterator 是可以用来统一处理所有不同的数据结构的接口机制。任何数据结构只要部署了 Interator 接口，就可以完成遍历操作。
 Iterator 的作用有三个：一是为各种数据结构，提供一个统一的、简便的访问接口；二是使得数据结构的成员能够按某种次序排列；三是 ES6 创造了一种新的遍历命令for&amp;hellip;of循环，Iterator 接口主要供for&amp;hellip;of消费。
 Interator 的遍历过程是首先创建一个指针对象，指向当前数据结构的起始位置，然后调用指针对象的 next 方法，从数据结构的第一个成员开始，依次指向每个成员，直到指向数据结构的结束位置。

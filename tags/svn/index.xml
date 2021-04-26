@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Svn on Two Cold</title>
-    <link>http://example.org/tags/svn/</link>
+    <link>https://vdorchan.github.io/tags/svn/</link>
     <description>Recent content in Svn on Two Cold</description>
     <image>
       <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Nov 2018 15:22:13 +0000</lastBuildDate><atom:link href="http://example.org/tags/svn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Nov 2018 15:22:13 +0000</lastBuildDate><atom:link href="https://vdorchan.github.io/tags/svn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从 svn 迁移到 git，并保留 commit 日志</title>
-      <link>http://example.org/posts/migrate-to-git-from-svn/</link>
+      <link>https://vdorchan.github.io/posts/migrate-to-git-from-svn/</link>
       <pubDate>Fri, 09 Nov 2018 15:22:13 +0000</pubDate>
       
-      <guid>http://example.org/posts/migrate-to-git-from-svn/</guid>
+      <guid>https://vdorchan.github.io/posts/migrate-to-git-from-svn/</guid>
       <description>之前为公司做了个基于 yeoman 的脚手架工具，公司是使用 svn 做版本控制的，所以这个工具也就使用了 svn 来记录版本。
 近期想做个迁移，把它放到 github 上去，这里对迁移过程做个简单的记录。
 首先，svn 地址是 http://svn.com.cn/svn/generator-pczt/ （非真实 svn 地址，这里做个举例）

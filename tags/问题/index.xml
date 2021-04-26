@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>问题 on Two Cold</title>
-    <link>http://example.org/tags/%E9%97%AE%E9%A2%98/</link>
+    <link>https://vdorchan.github.io/tags/%E9%97%AE%E9%A2%98/</link>
     <description>Recent content in 问题 on Two Cold</description>
     <image>
       <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Apr 2019 11:14:24 +0000</lastBuildDate><atom:link href="http://example.org/tags/%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Apr 2019 11:14:24 +0000</lastBuildDate><atom:link href="https://vdorchan.github.io/tags/%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 vue 开发项目遇到的问题总结</title>
-      <link>http://example.org/posts/vue-ken/</link>
+      <link>https://vdorchan.github.io/posts/vue-ken/</link>
       <pubDate>Fri, 19 Apr 2019 11:14:24 +0000</pubDate>
       
-      <guid>http://example.org/posts/vue-ken/</guid>
+      <guid>https://vdorchan.github.io/posts/vue-ken/</guid>
       <description>开发的项目为：https://github.com/vdorchan/vue-movie，最初使用 vue-cli 2 作为脚手架工具，后又使用 vue-cli 3 重构。
 开发过程还是遇到了一些问题，现在试着回想并记录下来。
 1、请求接口跨域 接口跨域可以通过 webpack 配置 API 代理解决

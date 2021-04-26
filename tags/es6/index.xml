@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ES6 on Two Cold</title>
-    <link>http://example.org/tags/es6/</link>
+    <link>https://vdorchan.github.io/tags/es6/</link>
     <description>Recent content in ES6 on Two Cold</description>
     <image>
       <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Mar 2018 10:21:28 +0000</lastBuildDate><atom:link href="http://example.org/tags/es6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Mar 2018 10:21:28 +0000</lastBuildDate><atom:link href="https://vdorchan.github.io/tags/es6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learn-ES6-class-extends</title>
-      <link>http://example.org/posts/learn-es6-class-extends/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-class-extends/</link>
       <pubDate>Fri, 09 Mar 2018 10:21:28 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-class-extends/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-class-extends/</guid>
       <description>1.简介 Class 可以通过extends关键字实现继承，这比 ES5 的通过修改原型链实现继承，要清晰和方便很多
 class Point { } class ColorPoint extends Point { } 上面代码，ColorPoint 继承了 Point，因为没有部署代码，所以两个类是完全一样的。
 子类必须在 constructor 中调用 super 方法，否则会出错。因为子类没有自己的 this 对象，所以需要 super 方法继承父类的 this 对象。
@@ -28,10 +28,10 @@ let cp = new ColorPoint(25, 8, &amp;#39;green&amp;#39;); cp instanceof ColorPoin
     
     <item>
       <title>Learn-ES6-Class</title>
-      <link>http://example.org/posts/learn-es6-class/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-class/</link>
       <pubDate>Thu, 08 Mar 2018 16:49:47 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-class/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-class/</guid>
       <description>1.简介 JavaScript 语言中，传统的生成实例对象的方法是通过构造函数 。
 function Person(name, age) { this.name = name this.age = age } Person.prototype.say = function () { console.log(&amp;#39;my name is &amp;#39; + this.name + &amp;#39;, i am &amp;#39; + this.age + &amp;#39; years old&amp;#39;) } var person = new Person(&amp;#39;kobe&amp;#39;, 30) person.say() // my name is kobe, i am 30 years old ES6 引入了 Class （类）这个概念，通过 class 关键字可以定义类，写法和其它传统语言类似，可以看作是一个语法糖，新的 class 写法只是让对象原型的写法更加清晰、更像面向对象编程的语法。
 class Person { contructor(name, age) { this.name = name this.</description>
@@ -39,20 +39,20 @@ class Person { contructor(name, age) { this.name = name this.</description>
     
     <item>
       <title>Learn-ES6-generator</title>
-      <link>http://example.org/posts/learn-es6-generator/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-generator/</link>
       <pubDate>Mon, 26 Feb 2018 11:48:36 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-generator/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-generator/</guid>
       <description>1. generator Generator 函数可以理解成是一个状态机，封装了多个内部状态。
 执行 Generator 函数可以返回一个遍历器对象，所以说，Generator 函数还是一个遍历器对象生成函数。返回的bi an li qi</description>
     </item>
     
     <item>
       <title>Learn-ES6-Iterator</title>
-      <link>http://example.org/posts/learn-es6-iterator/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-iterator/</link>
       <pubDate>Sat, 24 Feb 2018 14:05:59 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-iterator/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-iterator/</guid>
       <description>1.Iterator（遍历器） Javascript 现有的表示集合的数据结构，出了原本的对象（Object）和数组（Array），ES6 又增加了 Set 和 Map。Iterator 是可以用来统一处理所有不同的数据结构的接口机制。任何数据结构只要部署了 Interator 接口，就可以完成遍历操作。
 Iterator 的作用有三个：一是为各种数据结构，提供一个统一的、简便的访问接口；二是使得数据结构的成员能够按某种次序排列；三是 ES6 创造了一种新的遍历命令for&amp;hellip;of循环，Iterator 接口主要供for&amp;hellip;of消费。
 Interator 的遍历过程是首先创建一个指针对象，指向当前数据结构的起始位置，然后调用指针对象的 next 方法，从数据结构的第一个成员开始，依次指向每个成员，直到指向数据结构的结束位置。
@@ -63,10 +63,10 @@ const makeInterator = (array) =&amp;gt; { let nextIndex = 0 return { next() { re
     
     <item>
       <title>Learn-ES6-set-map</title>
-      <link>http://example.org/posts/learn-es6-set-map/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-set-map/</link>
       <pubDate>Sat, 24 Feb 2018 09:59:34 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-set-map/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-set-map/</guid>
       <description>1.Set ES6 提供了新的数据结构 Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。
 Set 本身是一个构造函数，用来生成 Set 数据结构。
 const s = new Set() [2, 3, 5, 4, 5, 2, 2].foreach(x =&amp;gt; s.add(x)) for (const i of s) { console.log(i) } // 2 3 5 4 上面代码通过add方法向 Set 结构加入成员，结果表明 Set 结构不会添加重复的值。
@@ -75,10 +75,10 @@ const s = new Set() [2, 3, 5, 4, 5, 2, 2].foreach(x =&amp;gt; s.add(x)) for (con
     
     <item>
       <title>Learn-ES6-object</title>
-      <link>http://example.org/posts/learn-es6-object/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-object/</link>
       <pubDate>Sun, 14 Jan 2018 18:13:25 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-object/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-object/</guid>
       <description>1. 属性的简洁表示法 ES6 允许直接写入变量和函数，作为对象的属性和方法。这样的书写更加简洁。
 const age = 18 const person = {age} console.log(person); // {age: 18} 除了属性简写，方法也可以简写。
 const Person = { sayHello() { console.log(&amp;#39;hello&amp;#39;); } } // 等同于 const Person = { sayHello: function () { console.log(&amp;#39;hello&amp;#39;); } } 因为简写写法的属性名始终是字符串，所以下面代码里的 class 因为是字符串，所以它不属于关键字，而导致解析错误。
@@ -88,10 +88,10 @@ const obj = { * m() { yield &amp;#39;hello world&amp;#39; } } 2.</description>
     
     <item>
       <title>ES6学习笔记-数组的扩展</title>
-      <link>http://example.org/posts/learn-es6-array/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-array/</link>
       <pubDate>Thu, 26 Oct 2017 16:20:54 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-array/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-array/</guid>
       <description>1. 扩展运算符 扩展运算符（spread）是三个点（&amp;hellip;）。它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列。
 console.log(...[1, 2, 3]); // 1 2 3  console.log(1, ...[2, 3, 4], 5); // 1 2 3 4 5  [...document.querySelectorAll(&amp;#39;div&amp;#39;)] // [&amp;lt;div&amp;gt;, &amp;lt;div&amp;gt;, &amp;lt;div&amp;gt;] 该运算符可以将一个数组变为参数序列。
 function push(array, ...items) { array.push(...items) } function add(x, y) { return x + y } const number = [2, 3] add(...number) // 5 扩展运算符后面可以放置表达式。
@@ -100,10 +100,10 @@ const arr = [ ...( x &amp;gt; 0 ? [&amp;#39;a&amp;#39;] : []), &amp;#39;b&amp;#3
     
     <item>
       <title>ES6学习笔记-函数的扩展</title>
-      <link>http://example.org/posts/learn-es6-function/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-function/</link>
       <pubDate>Thu, 19 Oct 2017 13:57:25 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-function/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-function/</guid>
       <description>1. 函数参数的默认值 在 ES6 之前，我们如果想要为函数参数制定默认的话，我们的做法是
 function log(x, y) { y = y || &amp;#39;World&amp;#39; console.log(x, y) } log(&amp;#39;Hello&amp;#39;) // Hello World log(&amp;#39;Hello&amp;#39;, &amp;#39;China&amp;#39;) // Hello China log(&amp;#39;Hello&amp;#39;, &amp;#39;&amp;#39;) // Hello World  // 因为 y 的值为 false 或者 为空的时候，都会被改为默认值，所以更好的做法是 if (typeof y === &amp;#39;undefined&amp;#39;) { y = &amp;#39;World&amp;#39; } ES6 则允许直接为参数设置默认值，方式是写在参数定义的后面。
 function log(x, y = &amp;#39;World&amp;#39;) { console.log(x, y) } log(&amp;#39;Hello&amp;#39;) // Hello World log(&amp;#39;Hello&amp;#39;, &amp;#39;China&amp;#39;) // Hello China log(&amp;#39;Hello&amp;#39;, &amp;#39;&amp;#39;) // Hello ES6 的这种写法简直是太简洁了，并且，阅读代码的时候，将很容易的意识到，有哪些参数是可以忽略的。</description>
@@ -111,10 +111,10 @@ function log(x, y = &amp;#39;World&amp;#39;) { console.log(x, y) } log(&amp;#39;
     
     <item>
       <title>ES6学习笔记-数值的扩展</title>
-      <link>http://example.org/posts/learn-es6-number/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-number/</link>
       <pubDate>Wed, 18 Oct 2017 23:38:09 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-number/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-number/</guid>
       <description>1. 二进制和八进制表示法 ES6 中用前缀 0b（0B）表示二进制。
 0b00001111 // 15 0b00001111 === 15 // true ES6 中用前缀 0o（或0O）表示八进制。明确不再允许使用前缀 0 来表示。
 0o100 // 64 0o100 === 64 // true 使用 Number 方法转换成十进制
@@ -125,10 +125,10 @@ Number.isFinite(18) // true Number.isFinite(0.8) // true Number.isFinite(NaN) //
     
     <item>
       <title>ES6学习笔记-正则的扩展</title>
-      <link>http://example.org/posts/learn-es6-regexp/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-regexp/</link>
       <pubDate>Fri, 13 Oct 2017 15:56:52 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-regexp/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-regexp/</guid>
       <description>正则一直是块难啃的骨头，乍一看就好复杂，各种符号字母交叉也不知道什么意思。编写一个正则，使用的时候是需要适应多种情况的，所以在掌握的不够深的时候，可能写出来的正则就容易出问题了。于是乎，大家就更倾向于复制粘贴大法咯，毕竟有些通用的正则，是能保证正确且足够可靠的。除了校验手机号码、邮箱这些常用的功能之外，其实正则是足够强大应用在很多方面的。正则很深奥，同时又很枯燥，要学好正则，可谓任重而道远啊。
 1. RegExp 构造函数 通常使用 RegExp 构造函数有两种情况 第一种情况就是参数为字符串，这个时候第二个参数就是正则表达式的修饰符（flag）
 var regexp = new RegExp(&amp;#39;[A-Z]&amp;#39;, &amp;#39;i&amp;#39;) 另一种情况，参数是一个正则表达式，返回的是这个正则表达式的拷贝
@@ -143,10 +143,10 @@ var regexp = new RegExp(/A-z/i, &amp;#39;g&amp;#39;) regexp.flags // g 上面的
     
     <item>
       <title>ES6学习笔记-字符串的扩展</title>
-      <link>http://example.org/posts/learn-es6-string/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-string/</link>
       <pubDate>Wed, 11 Oct 2017 14:49:31 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-string/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-string/</guid>
       <description>1. 字符的 Unicode 表示法  unicode 是一个字符集，包含了世界上几乎所有的字符，并且为每个字符分配一个唯一的码点，unicode 的出现是为了能在计算机上更好的处理多国家的语言文字。unicode 每年都还在更新，每年都会加入很多新的字符。广义的 unicode 还包括了一系列的编码规则（UTF-8，UTF-16，UTF-32等等）。
  JavaScript 有以下表示字符的方法
 &amp;#39;\z&amp;#39; === &amp;#39;z&amp;#39; // true &amp;#39;\172&amp;#39; === &amp;#39;z&amp;#39; // true &amp;#39;\x7A&amp;#39; === &amp;#39;z&amp;#39; // true &amp;#39;\u007A&amp;#39; === &amp;#39;z&amp;#39; // true 其中 JavaScript 允许采用 \uxxxx 形式表示一个字符，其中 xxxx 表示字符的 Unicode 码点
@@ -157,10 +157,10 @@ var regexp = new RegExp(/A-z/i, &amp;#39;g&amp;#39;) regexp.flags // g 上面的
     
     <item>
       <title>ES6学习笔记-let与const</title>
-      <link>http://example.org/posts/learn-es6-let-const/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-let-const/</link>
       <pubDate>Tue, 10 Oct 2017 21:41:03 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-let-const/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-let-const/</guid>
       <description>背景 ES6 即 ECMAScript 6.0 的简称，是 JavaScript 的下一代标准，在2015年6月正式发布了。
 ECMAScript 和 JavaScript 的关系 ECMASCript 和 JavaScript 的关系，在这里简单的概括下。
  NetScape 先创造了 JavaScript，然后，为了让这种语言成为国际标准，所以决定将其提交给 ECMA (国际标准化组织)。ECMA 在次年便发布了 ECMAScript 的 1.0 版。标准是针对 JAVAScript 语言制定的，但因为 JAVA 是 Sun 公司的商标，根据授权协议，只有 NetScape 公司可以使用 JAVAScript 这个名字，而且也为了让大家知道，这门语言的制定者是 ECMA，不是 NetScape。
@@ -171,10 +171,10 @@ ES6 在 ECMASCript 诞生后的很长一段时间里, 其并没有多大的变�
     
     <item>
       <title>ES6学习笔记-变量的解构赋值</title>
-      <link>http://example.org/posts/learn-es6-destructuring/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-destructuring/</link>
       <pubDate>Tue, 10 Oct 2017 21:41:03 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-destructuring/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-destructuring/</guid>
       <description>ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为 解构（Destructuring）
  ES6 之前， 声明多个变量我们可以这样子
 var a = 1, b = 2, c = 3 而 ES6 增加了解构赋值， 赋值变得更加的高大上了

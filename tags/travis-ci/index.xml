@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Travis-CI on Two Cold</title>
-    <link>http://example.org/tags/travis-ci/</link>
+    <link>https://vdorchan.github.io/tags/travis-ci/</link>
     <description>Recent content in Travis-CI on Two Cold</description>
     <image>
       <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Apr 2019 10:32:01 +0000</lastBuildDate><atom:link href="http://example.org/tags/travis-ci/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Apr 2019 10:32:01 +0000</lastBuildDate><atom:link href="https://vdorchan.github.io/tags/travis-ci/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Travis-CI 完成高级的自动化部署</title>
-      <link>http://example.org/posts/set-up-advanced-automatic-deployment-with-travis-ci/</link>
+      <link>https://vdorchan.github.io/posts/set-up-advanced-automatic-deployment-with-travis-ci/</link>
       <pubDate>Thu, 18 Apr 2019 10:32:01 +0000</pubDate>
       
-      <guid>http://example.org/posts/set-up-advanced-automatic-deployment-with-travis-ci/</guid>
+      <guid>https://vdorchan.github.io/posts/set-up-advanced-automatic-deployment-with-travis-ci/</guid>
       <description>会啰嗦几句简单介绍下然后实战
  写代码经常要花很多时间在构建和部署上面，像是我的个人网站、博客系统或者是一些小项目，每次有些改动就得去重新构建生产代码，改完之后还要把它弄上服务器，更新到线上去。
 项目一多，改动一多，懒惰的我，就会把它“堆起来”，等一个比较长的开发周期结束之后，再去更新线上。虽然这样减少了更新的次数，但依然还是又累又耗费时间。身为高贵的程序员不能再总是浪费生命干这种活了，必须要找个苦力给我搞定它。

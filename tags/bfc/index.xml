@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BFC on Two Cold</title>
-    <link>http://example.org/tags/bfc/</link>
+    <link>https://vdorchan.github.io/tags/bfc/</link>
     <description>Recent content in BFC on Two Cold</description>
     <image>
       <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Apr 2019 23:01:03 +0000</lastBuildDate><atom:link href="http://example.org/tags/bfc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Apr 2019 23:01:03 +0000</lastBuildDate><atom:link href="https://vdorchan.github.io/tags/bfc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>理解 CSS 布局和 BFC</title>
-      <link>http://example.org/posts/understand-css-layout-and-block-formating-context/</link>
+      <link>https://vdorchan.github.io/posts/understand-css-layout-and-block-formating-context/</link>
       <pubDate>Wed, 24 Apr 2019 23:01:03 +0000</pubDate>
       
-      <guid>http://example.org/posts/understand-css-layout-and-block-formating-context/</guid>
+      <guid>https://vdorchan.github.io/posts/understand-css-layout-and-block-formating-context/</guid>
       <description>正常布局流 (normal flow) 正常布局流是指在不对页面进行任何布局控制时，浏览器默认的HTML布局方式。
 在 normal flow 中，元素按照其在 HTML 源码中出现的先后位置至上而下布局。在这个过程中，行内元素水平排列，直到当行被占满然后换行。块级元素则会被渲染为完整的一个新行，除非另外指定，否则所有元素默认都是 normal flow 定位，也可以说，普通流中元素的位置由该元素在 HTML 源码中的位置决定。
 以下这些布局技术可能会覆盖默认的流式布局

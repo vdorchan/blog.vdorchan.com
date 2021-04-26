@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>变量 on Two Cold</title>
-    <link>http://example.org/tags/%E5%8F%98%E9%87%8F/</link>
+    <link>https://vdorchan.github.io/tags/%E5%8F%98%E9%87%8F/</link>
     <description>Recent content in 变量 on Two Cold</description>
     <image>
       <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Oct 2017 23:38:09 +0000</lastBuildDate><atom:link href="http://example.org/tags/%E5%8F%98%E9%87%8F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Oct 2017 23:38:09 +0000</lastBuildDate><atom:link href="https://vdorchan.github.io/tags/%E5%8F%98%E9%87%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ES6学习笔记-数值的扩展</title>
-      <link>http://example.org/posts/learn-es6-number/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-number/</link>
       <pubDate>Wed, 18 Oct 2017 23:38:09 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-number/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-number/</guid>
       <description>1. 二进制和八进制表示法 ES6 中用前缀 0b（0B）表示二进制。
 0b00001111 // 15 0b00001111 === 15 // true ES6 中用前缀 0o（或0O）表示八进制。明确不再允许使用前缀 0 来表示。
 0o100 // 64 0o100 === 64 // true 使用 Number 方法转换成十进制
@@ -27,10 +27,10 @@ Number.isFinite(18) // true Number.isFinite(0.8) // true Number.isFinite(NaN) //
     
     <item>
       <title>ES6学习笔记-字符串的扩展</title>
-      <link>http://example.org/posts/learn-es6-string/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-string/</link>
       <pubDate>Wed, 11 Oct 2017 14:49:31 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-string/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-string/</guid>
       <description>1. 字符的 Unicode 表示法  unicode 是一个字符集，包含了世界上几乎所有的字符，并且为每个字符分配一个唯一的码点，unicode 的出现是为了能在计算机上更好的处理多国家的语言文字。unicode 每年都还在更新，每年都会加入很多新的字符。广义的 unicode 还包括了一系列的编码规则（UTF-8，UTF-16，UTF-32等等）。
  JavaScript 有以下表示字符的方法
 &amp;#39;\z&amp;#39; === &amp;#39;z&amp;#39; // true &amp;#39;\172&amp;#39; === &amp;#39;z&amp;#39; // true &amp;#39;\x7A&amp;#39; === &amp;#39;z&amp;#39; // true &amp;#39;\u007A&amp;#39; === &amp;#39;z&amp;#39; // true 其中 JavaScript 允许采用 \uxxxx 形式表示一个字符，其中 xxxx 表示字符的 Unicode 码点
@@ -41,10 +41,10 @@ Number.isFinite(18) // true Number.isFinite(0.8) // true Number.isFinite(NaN) //
     
     <item>
       <title>ES6学习笔记-let与const</title>
-      <link>http://example.org/posts/learn-es6-let-const/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-let-const/</link>
       <pubDate>Tue, 10 Oct 2017 21:41:03 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-let-const/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-let-const/</guid>
       <description>背景 ES6 即 ECMAScript 6.0 的简称，是 JavaScript 的下一代标准，在2015年6月正式发布了。
 ECMAScript 和 JavaScript 的关系 ECMASCript 和 JavaScript 的关系，在这里简单的概括下。
  NetScape 先创造了 JavaScript，然后，为了让这种语言成为国际标准，所以决定将其提交给 ECMA (国际标准化组织)。ECMA 在次年便发布了 ECMAScript 的 1.0 版。标准是针对 JAVAScript 语言制定的，但因为 JAVA 是 Sun 公司的商标，根据授权协议，只有 NetScape 公司可以使用 JAVAScript 这个名字，而且也为了让大家知道，这门语言的制定者是 ECMA，不是 NetScape。
@@ -55,10 +55,10 @@ ES6 在 ECMASCript 诞生后的很长一段时间里, 其并没有多大的变�
     
     <item>
       <title>ES6学习笔记-变量的解构赋值</title>
-      <link>http://example.org/posts/learn-es6-destructuring/</link>
+      <link>https://vdorchan.github.io/posts/learn-es6-destructuring/</link>
       <pubDate>Tue, 10 Oct 2017 21:41:03 +0000</pubDate>
       
-      <guid>http://example.org/posts/learn-es6-destructuring/</guid>
+      <guid>https://vdorchan.github.io/posts/learn-es6-destructuring/</guid>
       <description>ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为 解构（Destructuring）
  ES6 之前， 声明多个变量我们可以这样子
 var a = 1, b = 2, c = 3 而 ES6 增加了解构赋值， 赋值变得更加的高大上了
