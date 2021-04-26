@@ -1,4 +1,4 @@
-baseURL: "http://example.org/"
+baseURL: "https://vdorchan.github.io/"
 languageCode: "en-us"
 title: "Two Cold"
 theme: "PaperMod"
@@ -55,7 +55,7 @@ params:
     # profile-mode
     profileMode:
         enabled: false # needs to be explicitly set
-        title: ExampleSite
+        title: TwoCold
         subtitle: "This is subtitle"
         imageUrl: "<img location>"
         imageWidth: 120
@@ -78,7 +78,7 @@ params:
         - name: stackoverflow
           url: "https://stackoverflow.com"
         - name: github
-          url: "https://github.com/"
+          url: "https://github.com/vdorchan"
 
     analytics:
         google:
@@ -110,15 +110,26 @@ params:
         keys: ["title", "permalink", "summary", "content"]
 menu:
     main:
-        - identifier: categories
-          name: categories
-          url: /categories/
-          weight: 10
+        - identifier: archive
+          name: Archive
+          url: /archive/
+          weight: 20
         - identifier: tags
-          name: tags
+          name: Tags
           url: /tags/
           weight: 20
-        - identifier: example
-          name: example.org
-          url: https://example.org
-          weight: 30
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 20
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+taxonomies:
+    category: categories
+    tag: tags
+    series: series
