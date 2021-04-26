@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数组 on Two Cold</title>
+    <link>http://example.org/tags/%E6%95%B0%E7%BB%84/</link>
+    <description>Recent content in 数组 on Two Cold</description>
+    <image>
+      <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
+      <link><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Oct 2017 16:20:54 +0000</lastBuildDate><atom:link href="http://example.org/tags/%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ES6学习笔记-数组的扩展</title>
+      <link>http://example.org/posts/learn-es6-array/</link>
+      <pubDate>Thu, 26 Oct 2017 16:20:54 +0000</pubDate>
+      
+      <guid>http://example.org/posts/learn-es6-array/</guid>
+      <description>1. 扩展运算符 扩展运算符（spread）是三个点（&amp;hellip;）。它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列。
+console.log(...[1, 2, 3]); // 1 2 3  console.log(1, ...[2, 3, 4], 5); // 1 2 3 4 5  [...document.querySelectorAll(&amp;#39;div&amp;#39;)] // [&amp;lt;div&amp;gt;, &amp;lt;div&amp;gt;, &amp;lt;div&amp;gt;] 该运算符可以将一个数组变为参数序列。
+function push(array, ...items) { array.push(...items) } function add(x, y) { return x + y } const number = [2, 3] add(...number) // 5 扩展运算符后面可以放置表达式。
+const arr = [ ...( x &amp;gt; 0 ? [&amp;#39;a&amp;#39;] : []), &amp;#39;b&amp;#39; ] 如果扩展运算符后面是一个空数组，则不产生任何效果。</description>
+    </item>
+    
+  </channel>
+</rss>

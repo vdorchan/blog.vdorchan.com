@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>正则 on Two Cold</title>
+    <link>http://example.org/tags/%E6%AD%A3%E5%88%99/</link>
+    <description>Recent content in 正则 on Two Cold</description>
+    <image>
+      <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
+      <link><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Oct 2017 15:56:52 +0000</lastBuildDate><atom:link href="http://example.org/tags/%E6%AD%A3%E5%88%99/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ES6学习笔记-正则的扩展</title>
+      <link>http://example.org/posts/learn-es6-regexp/</link>
+      <pubDate>Fri, 13 Oct 2017 15:56:52 +0000</pubDate>
+      
+      <guid>http://example.org/posts/learn-es6-regexp/</guid>
+      <description>正则一直是块难啃的骨头，乍一看就好复杂，各种符号字母交叉也不知道什么意思。编写一个正则，使用的时候是需要适应多种情况的，所以在掌握的不够深的时候，可能写出来的正则就容易出问题了。于是乎，大家就更倾向于复制粘贴大法咯，毕竟有些通用的正则，是能保证正确且足够可靠的。除了校验手机号码、邮箱这些常用的功能之外，其实正则是足够强大应用在很多方面的。正则很深奥，同时又很枯燥，要学好正则，可谓任重而道远啊。
+1. RegExp 构造函数 通常使用 RegExp 构造函数有两种情况 第一种情况就是参数为字符串，这个时候第二个参数就是正则表达式的修饰符（flag）
+var regexp = new RegExp(&amp;#39;[A-Z]&amp;#39;, &amp;#39;i&amp;#39;) 另一种情况，参数是一个正则表达式，返回的是这个正则表达式的拷贝
+var regexp = new RegExp(/A-Z/i) 上面的这种情况，是没有没办法传正则表达式的修饰符作为第二个参数，ES6 则允许了这种情况
+var regexp = new RegExp(/A-z/i, &amp;#39;g&amp;#39;) regexp.flags // g 上面的代码中，第二个参数指定的修饰符，会覆盖掉原有的正则表达式的修饰符
+2. 字符串的正则方法 to do &amp;hellip;
+3. u 修饰符 在字符串的扩展里也知道了很多 ES6 之前 JavaScript 是没办法识别大于 0xFFFF 的 Unicode 字符的，所以正则表达式也不能正确的处理大于 0xFFFF 的 Unicode 字符的，ES6 增加了 u 修饰符来解决这个问题。
+/\ud848\udd04/.test(&amp;#39;\ud848&amp;#39;) // true /\ud848\udd04/u.test(&amp;#39;\ud848&amp;#39;) // false 出了上面代码的情况，加了 u 修饰符之后还会改变下面这些代码的行为
+  点标识符
+原本的（.）字符是没办法识别大于 0xFFFF 的 Unicode 字符的，ES6 中可以加上 u 修饰符</description>
+    </item>
+    
+  </channel>
+</rss>

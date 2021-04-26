@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>渲染 on Two Cold</title>
+    <link>http://example.org/tags/%E6%B8%B2%E6%9F%93/</link>
+    <description>Recent content in 渲染 on Two Cold</description>
+    <image>
+      <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
+      <link><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Apr 2019 10:44:48 +0000</lastBuildDate><atom:link href="http://example.org/tags/%E6%B8%B2%E6%9F%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>前端性能优化与浏览器渲染</title>
+      <link>http://example.org/posts/frontend-performance-optimization/</link>
+      <pubDate>Tue, 23 Apr 2019 10:44:48 +0000</pubDate>
+      
+      <guid>http://example.org/posts/frontend-performance-optimization/</guid>
+      <description>对性能优化的知识点做了些总结，如有纰漏，跪求批评指正。
+ 在我们共同推动网页实现更多功能的过程中，将遇到一个常见的问题：性能。 如今，网站拥有比以往更多的功能，以至于许多网站都将精力用于在各种网络条件和设备上提供更高的性能。
+不过，性能问题多种多样。轻微性能问题可能只会导致微弱的延迟，给您的用户带来短暂的不便。而严重的性能问题可能导致您的网站完全无法访问，无法对用户输入进行响应或两者同时发生。
+内容压缩和优化 总体来说，我们要避免不必要的下载，首先要去评估每个资产的表现：其价值及其技术性能。然后根据这些资源是否提供了足够的价值来决定是否要移除它们。
+比如一些 CSS 框架的开销可能导致渲染延迟严重，你可以视情况移除不必要的开销，以加速渲染。或者，移除不是必须的框架（使用更小的框架代替，例如使用 zepto 代替 jQuery，使用 Preact 代替 React）
+而那些必要的资源，我们应该要对它进行压缩优化，根据资源(文本、图像、字体、源码等)的不同，我们使用不同技术压缩。
+除了压缩，还可以对不同资源进行特定的优化：
+  图像优化
+ 选择合适的尺寸 使用 CSS3 效果和网页字体代替图像 由于人眼的工作方式的缘故，可以适当进行有损压缩 假如浏览器支持，可以使用 WebP 和 JPEG XR 等压缩率更高的新格式 使用 &amp;lt;picture&amp;gt; 和 &amp;lt;img srcset&amp;gt; 实现响应式图片使用 &amp;lt;picture&amp;gt; 和 &amp;lt;img srcset&amp;gt; 来完成。给 img 或设置了 background 的 CSS 属性的元素，将其设置为 display: none，并不能其阻止加载图片。 使用视频代替 GIF， 当使用视频代替动画 GIF 时，可以减小数据量，并可能减少系统资源的使用。    脚本优化
+ 减少重排（reflow）和重绘（repaint）操作 缓存 DOM 元素、DOM 列表长度 length、属性值 使用事件委托，避免批量绑定事件 尽量使用 ID 选择器，因为它一经找到就停止查找，而使用类选择器的话将遍历整个dom 移动端使用 touch 事件代替 click 事件，因为 click 有 300ms 延迟 使用节流（throttle）和防抖（debounce）函数减少性能消耗    HTML优化</description>
+    </item>
+    
+  </channel>
+</rss>

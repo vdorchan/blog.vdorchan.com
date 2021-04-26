@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Two Cold</title>
+    <link>http://example.org/tags/git/</link>
+    <description>Recent content in git on Two Cold</description>
+    <image>
+      <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
+      <link><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Nov 2018 17:31:14 +0000</lastBuildDate><atom:link href="http://example.org/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git 提示无法 pull 仓库（refusing-to-merge-unrelated-histories）</title>
+      <link>http://example.org/posts/git-refusing-to-merge-unrelated-histories/</link>
+      <pubDate>Mon, 12 Nov 2018 17:31:14 +0000</pubDate>
+      
+      <guid>http://example.org/posts/git-refusing-to-merge-unrelated-histories/</guid>
+      <description>背景 在本地完成了一个项目，并使用 git 完成了初始化。
+然后想同步到 github 上去，便在 github 上 new repository 创建了一个新的库，并勾选了 Initialize this repository with a README，也就是这个仓库初始化的时候将自动带有一个 Readme.md 文件。
+在 github 上创建好 repo 后，接下来的操作自然是将本地仓库 push 到远程仓库上。
+因为 github 上的 repo 带有 Readme.md，而本地的没有，所以就需要先将 github 上的 pull 下来。
+在执行 git pull 命令后，便出现了一条合并失败的提示。
+fatal: refusing to merge unrelated histories 提示的意思是，拒绝合并不相关的历史。
+解决 Google 了一下后得知，两个仓库（本地和远程）都有 commit，但是却没有相关联的 commit，因此 git 认为用户应该是填错了 origin，两个仓库并无关联。
+这个时候只要给命令加个选项便可以解决问题了（&amp;ndash;allow-unrelated-histories）。
+git pull origin master --allow-unrelated-historie </description>
+    </item>
+    
+    <item>
+      <title>从 svn 迁移到 git，并保留 commit 日志</title>
+      <link>http://example.org/posts/migrate-to-git-from-svn/</link>
+      <pubDate>Fri, 09 Nov 2018 15:22:13 +0000</pubDate>
+      
+      <guid>http://example.org/posts/migrate-to-git-from-svn/</guid>
+      <description>之前为公司做了个基于 yeoman 的脚手架工具，公司是使用 svn 做版本控制的，所以这个工具也就使用了 svn 来记录版本。
+近期想做个迁移，把它放到 github 上去，这里对迁移过程做个简单的记录。
+首先，svn 地址是 http://svn.com.cn/svn/generator-pczt/ （非真实 svn 地址，这里做个举例）
+该项目位置在 svn 中的 base repository，因此不涉及到 tags，branches，trunk。
+用户映射 按照网上文章，先创建个文件（users.txt），做个用户映射，将 svn 的用户和 git 上的用户关联起来。
+chenwudong = vdorchan &amp;lt;vdorchan@gmail.com&amp;gt; git svn clone 按照文档中的命令
+# --stdlayout 跟踪标准的Subversion存储库 # -authors-file 指定用户映射的文件 git svn clone --stdlayout --no-metadata -authors-file=users.txt http://svn.com.cn/svn/generator-pczt/ generator-pczt 输入上述的命令后，在 generator-pczt中创建了一个空的 git 仓库，但并没有将文件从 svn 拉下来，并且命令行输出了以下的一些信息。
+Initialized empty Git repository in /Users/vdorchan/Documents/www/Learn-Yeoman/generator-pczt/.git/ Using higher level of URL: http://svn.com.cn/svn/generator-pczt =&amp;gt; http://svn.com.cn/svn W: Ignoring error from SVN, path probably does not exist: (160013): Filesystem has no item: File not found: revision 100, path &amp;#39;/generator-pczt&amp;#39; W: Do not be alarmed at the above message git-svn is just searching aggressively for old history.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Svn on Two Cold</title>
+    <link>http://example.org/tags/svn/</link>
+    <description>Recent content in Svn on Two Cold</description>
+    <image>
+      <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
+      <link><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Nov 2018 15:22:13 +0000</lastBuildDate><atom:link href="http://example.org/tags/svn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从 svn 迁移到 git，并保留 commit 日志</title>
+      <link>http://example.org/posts/migrate-to-git-from-svn/</link>
+      <pubDate>Fri, 09 Nov 2018 15:22:13 +0000</pubDate>
+      
+      <guid>http://example.org/posts/migrate-to-git-from-svn/</guid>
+      <description>之前为公司做了个基于 yeoman 的脚手架工具，公司是使用 svn 做版本控制的，所以这个工具也就使用了 svn 来记录版本。
+近期想做个迁移，把它放到 github 上去，这里对迁移过程做个简单的记录。
+首先，svn 地址是 http://svn.com.cn/svn/generator-pczt/ （非真实 svn 地址，这里做个举例）
+该项目位置在 svn 中的 base repository，因此不涉及到 tags，branches，trunk。
+用户映射 按照网上文章，先创建个文件（users.txt），做个用户映射，将 svn 的用户和 git 上的用户关联起来。
+chenwudong = vdorchan &amp;lt;vdorchan@gmail.com&amp;gt; git svn clone 按照文档中的命令
+# --stdlayout 跟踪标准的Subversion存储库 # -authors-file 指定用户映射的文件 git svn clone --stdlayout --no-metadata -authors-file=users.txt http://svn.com.cn/svn/generator-pczt/ generator-pczt 输入上述的命令后，在 generator-pczt中创建了一个空的 git 仓库，但并没有将文件从 svn 拉下来，并且命令行输出了以下的一些信息。
+Initialized empty Git repository in /Users/vdorchan/Documents/www/Learn-Yeoman/generator-pczt/.git/ Using higher level of URL: http://svn.com.cn/svn/generator-pczt =&amp;gt; http://svn.com.cn/svn W: Ignoring error from SVN, path probably does not exist: (160013): Filesystem has no item: File not found: revision 100, path &amp;#39;/generator-pczt&amp;#39; W: Do not be alarmed at the above message git-svn is just searching aggressively for old history.</description>
+    </item>
+    
+  </channel>
+</rss>

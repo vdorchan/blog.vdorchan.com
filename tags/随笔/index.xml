@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随笔 on Two Cold</title>
+    <link>http://example.org/tags/%E9%9A%8F%E7%AC%94/</link>
+    <description>Recent content in 随笔 on Two Cold</description>
+    <image>
+      <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
+      <link><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Nov 2018 17:39:08 +0000</lastBuildDate><atom:link href="http://example.org/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>真的是很久没写东西啦</title>
+      <link>http://example.org/posts/have-not-written-for-a-long-time/</link>
+      <pubDate>Thu, 08 Nov 2018 17:39:08 +0000</pubDate>
+      
+      <guid>http://example.org/posts/have-not-written-for-a-long-time/</guid>
+      <description>乱写一通 这篇乱写写，走个流程。
+太快了 现在的时间是 2018 年 11 月 8 号，距离毕业年的 6 月，已经有两年多了，也就做了两年多的前端工程师，至今仍坚守在毕业就进来的公司。
+期间学了不少的东西，不管是困难还是成果，无一例外都尝过滋味。迷茫估计是期间最经常有的状况。
+近年底，也是时候好好的想一想未来的职业规划了。
+代码写多了，文章好像都不会写了。
+啊！！！
+不写了！</description>
+    </item>
+    
+  </channel>
+</rss>

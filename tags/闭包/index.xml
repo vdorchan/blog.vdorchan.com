@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>闭包 on Two Cold</title>
+    <link>http://example.org/tags/%E9%97%AD%E5%8C%85/</link>
+    <description>Recent content in 闭包 on Two Cold</description>
+    <image>
+      <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
+      <link><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Dec 2017 15:00:00 +0000</lastBuildDate><atom:link href="http://example.org/tags/%E9%97%AD%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>学习 JavaScript 的闭包（翻译）</title>
+      <link>http://example.org/posts/learn-javascript-closures/</link>
+      <pubDate>Wed, 13 Dec 2017 15:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/learn-javascript-closures/</guid>
+      <description>1. 扩展运算符  闭包（Closures）: 闭包是指一个拥有很多变量和与这些变量绑定的环境的表达式（大多数时候是一个函数），这些变量也属于这个表达式。
+ Closures are one of the most powerful features of ECMAScript (javascript) but they cannot be property exploited without understanding them. They are, however, relatively easy to create, even accidentally, and their creation has potentially harmful consequences, particularly in some relatively common web browser environments. To avoid accidentally encountering the drawbacks and to take advantage of the benefits they offer it is necessary to understand their mechanism.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网站部署 on Two Cold</title>
+    <link>http://example.org/tags/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</link>
+    <description>Recent content in 网站部署 on Two Cold</description>
+    <image>
+      <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
+      <link><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Apr 2019 10:32:01 +0000</lastBuildDate><atom:link href="http://example.org/tags/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Travis-CI 完成高级的自动化部署</title>
+      <link>http://example.org/posts/set-up-advanced-automatic-deployment-with-travis-ci/</link>
+      <pubDate>Thu, 18 Apr 2019 10:32:01 +0000</pubDate>
+      
+      <guid>http://example.org/posts/set-up-advanced-automatic-deployment-with-travis-ci/</guid>
+      <description>会啰嗦几句简单介绍下然后实战
+ 写代码经常要花很多时间在构建和部署上面，像是我的个人网站、博客系统或者是一些小项目，每次有些改动就得去重新构建生产代码，改完之后还要把它弄上服务器，更新到线上去。
+项目一多，改动一多，懒惰的我，就会把它“堆起来”，等一个比较长的开发周期结束之后，再去更新线上。虽然这样减少了更新的次数，但依然还是又累又耗费时间。身为高贵的程序员不能再总是浪费生命干这种活了，必须要找个苦力给我搞定它。
+通过 Google 发现 Travis CI 是最合适的选择。
+什么是 CI CI 即持续集成服务，是 Continuous Integration 的简称，而 Travis CI 是提供这种服务里面市场份额最大的那个。
+ 之前开发 Electron 应用，需要 windows 环境构建，但因为 Travis CI 不支持 windows 环境，还一起用过 appveyor。appveyor 也是提供 CI 服务的。不过后来看到新闻，说 Travis CI 开始支持 windows 了，不过我还没试过。
+ 持续集成就是在团队开发的时候，成员们持续（频繁）将代码改动集成到主干上去。而每次集成都是通过自动化的构建（包括编译，发布，自动化测试）来验证。
+持续集成的好处在于，每次代码的小幅变更，就能看到运行pt addo结果，从而也能尽早的发现集成错误。这样子就能不断累积小的变更，而不是在开发周期结束时，一下子合并一大块代码。
+Travis CI 和 Github 账号绑定，你可以选择需要持续集成的项目，之后只要这个项目有代码变动，就会自动抓取，然后提供一个运行环境，执行测试，完成构建，然后也能部署到服务器上去。
+.travis.yml 在 官网，点击右上角的个人头像，可以使用 Github 账户登入 Travis CI。然后便可以选择需要同步的项目。
+这个同步的项目必须要有一个 .travis.yml 文件，是 Travis.yml 的配置文件，文件格式是 YAML 格式。它指定了 Travis 的行为。该文件必须 push 到 Github 仓库里面，一旦代码仓库有新的 Commit，Travis 就会去找这个文件，执行里面的命令。一般它是下面这样的</description>
+    </item>
+    
+    <item>
+      <title>通过 certbot 给网站部署 Let’s Encrypt SSL 安全证书</title>
+      <link>http://example.org/posts/deploy-lets-encrypt-ssl-certificate-with-certbot/</link>
+      <pubDate>Mon, 01 Apr 2019 12:12:28 +0000</pubDate>
+      
+      <guid>http://example.org/posts/deploy-lets-encrypt-ssl-certificate-with-certbot/</guid>
+      <description>http 不安全 当部署完网站，你迫不及待打开 chrome，输入网站域名，敲下回撤，页面便展现在你的眼前。这时候可能会注意到域名的左边，赫然显示着“不安全”。这太难看了，没法忍。
+chrome 显示不安全的其中一个原因就是网站没有配置安全证书，使用的是 HTTP 而不是 HTTPS。
+http 是一个传输网页内容的协议，本身不带加密，是明文传输的。而 https 可以理解为“ HTTP over SSL/TLS ”，这是为了安全，为 http 协议上加了一层 SSL/TLS 安全协议。
+SSL/TLS 是什么？ SSL（ Secure Sockets Layer） 和 TLS（Transport Layer Security） 是同一个东西的不同阶段，可以理解为一个东西，都是安全协议。
+Secure Sockets Layer 翻译为“安全套接层”，所以 HTTP over SSL/TLS ” 就是带“安全套接层”的 http 协议”，既然带上了“安全套”，那肯定是安全得多了。
+如何部署 https ？ 部署 https 不仅仅是为了安全，各大互联网企业和一些相关的基金会也在推，可以给一个网站部署 https 几乎是必须的。那么要怎么部署呢？
+你只需要有一张被信任的 CA （ Certificate Authority ）也就是证书授权中心颁发的 SSL 安全证书，并且将它部署到你的网站服务器上。一旦部署成功后，当用户访问你的网站时，浏览器会在显示的网址前加一把小绿锁，表明这个网站是安全的，当然同时你也会看到网址前的前缀变成了 https ，不再是 http 了。
+以前比如 Godaddy 、 GlobalSign 等机构签发的证书一般都很贵，为了推进 https 的普及，EEF 电子前哨基金会、 Mozilla 基金会和美国密歇根大学成立了一个公益组织叫 ISRG （ Internet Security Research Group ），这个组织从 2015 年开始推出了 Let’s Encrypt 免费证书</description>
+    </item>
+    
+  </channel>
+</rss>

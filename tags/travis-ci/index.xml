@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Travis-CI on Two Cold</title>
+    <link>http://example.org/tags/travis-ci/</link>
+    <description>Recent content in Travis-CI on Two Cold</description>
+    <image>
+      <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
+      <link><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Apr 2019 10:32:01 +0000</lastBuildDate><atom:link href="http://example.org/tags/travis-ci/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Travis-CI 完成高级的自动化部署</title>
+      <link>http://example.org/posts/set-up-advanced-automatic-deployment-with-travis-ci/</link>
+      <pubDate>Thu, 18 Apr 2019 10:32:01 +0000</pubDate>
+      
+      <guid>http://example.org/posts/set-up-advanced-automatic-deployment-with-travis-ci/</guid>
+      <description>会啰嗦几句简单介绍下然后实战
+ 写代码经常要花很多时间在构建和部署上面，像是我的个人网站、博客系统或者是一些小项目，每次有些改动就得去重新构建生产代码，改完之后还要把它弄上服务器，更新到线上去。
+项目一多，改动一多，懒惰的我，就会把它“堆起来”，等一个比较长的开发周期结束之后，再去更新线上。虽然这样减少了更新的次数，但依然还是又累又耗费时间。身为高贵的程序员不能再总是浪费生命干这种活了，必须要找个苦力给我搞定它。
+通过 Google 发现 Travis CI 是最合适的选择。
+什么是 CI CI 即持续集成服务，是 Continuous Integration 的简称，而 Travis CI 是提供这种服务里面市场份额最大的那个。
+ 之前开发 Electron 应用，需要 windows 环境构建，但因为 Travis CI 不支持 windows 环境，还一起用过 appveyor。appveyor 也是提供 CI 服务的。不过后来看到新闻，说 Travis CI 开始支持 windows 了，不过我还没试过。
+ 持续集成就是在团队开发的时候，成员们持续（频繁）将代码改动集成到主干上去。而每次集成都是通过自动化的构建（包括编译，发布，自动化测试）来验证。
+持续集成的好处在于，每次代码的小幅变更，就能看到运行pt addo结果，从而也能尽早的发现集成错误。这样子就能不断累积小的变更，而不是在开发周期结束时，一下子合并一大块代码。
+Travis CI 和 Github 账号绑定，你可以选择需要持续集成的项目，之后只要这个项目有代码变动，就会自动抓取，然后提供一个运行环境，执行测试，完成构建，然后也能部署到服务器上去。
+.travis.yml 在 官网，点击右上角的个人头像，可以使用 Github 账户登入 Travis CI。然后便可以选择需要同步的项目。
+这个同步的项目必须要有一个 .travis.yml 文件，是 Travis.yml 的配置文件，文件格式是 YAML 格式。它指定了 Travis 的行为。该文件必须 push 到 Github 仓库里面，一旦代码仓库有新的 Commit，Travis 就会去找这个文件，执行里面的命令。一般它是下面这样的</description>
+    </item>
+    
+  </channel>
+</rss>
