@@ -1,0 +1,80 @@
+{{- define "main" }}
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"> -->
+
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+</header>
+
+<style>
+    .card {
+        font-size: 1rem;
+        background: var(--border);
+        color: var(--primary);
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .card-image img {
+        object-fit: contain;
+    }
+
+    .subtitle {
+        color: var(--secondary);
+    }
+
+    .card-content {
+        color: var(--secondary);
+    }
+</style>
+
+{{ with .Params.tags }}
+<div id="projects" class="columns is-desktop is-multiline is-mobile">
+    {{ range . }}
+    <div class="column is-one-third">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="{{ .cover }}" alt="Placeholder image">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="subtitle">
+                    <a target="_blank" href="{{.link}}">{{ .title }}</a>
+                </div>
+
+                <div class="content">
+                    {{ with .source }}
+                    <p>
+                        <a target="_blank" href="{{.}}">源码</a>
+                    </p>
+                    {{ end }}
+                    <p>
+                        {{ .description }}
+                    </p>
+                    {{ with .similars }}
+                    <div>
+                        类似的还有
+                        {{ range . }}
+                        <a target="_blank" href="{{.link}}">{{.title}}</a>、
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                    <br>
+                    <time datetime="{{ .date }}">{{.date}}</time>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
+
+{{- end }}{{/* end main */}}
