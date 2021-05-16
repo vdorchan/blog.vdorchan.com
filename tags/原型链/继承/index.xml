@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>原型链/继承 on Two Cold</title>
+    <link>https://vdorchan.github.io/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/%E7%BB%A7%E6%89%BF/</link>
+    <description>Recent content in 原型链/继承 on Two Cold</description>
+    <image>
+      <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
+      <link><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://vdorchan.github.io/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/%E7%BB%A7%E6%89%BF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>让人脑壳疼的继承与原型链</title>
+      <link>https://vdorchan.github.io/posts/interitance-and-the-prototype-chain/</link>
+      <pubDate>Wed, 27 Mar 2019 10:43:12 +0000</pubDate>
+      
+      <guid>https://vdorchan.github.io/posts/interitance-and-the-prototype-chain/</guid>
+      <description>JavaScript 的继承是基于原型链实现的。虽然在 ES2015/ES6 中引入了class关键字，但那仅仅是语法糖。
+原型链是一种机制，指的是 JavaScript 每个对象都有一个内置的 __proto__ 属性指向创建它的构造函数的 prototype （原型）属性。
+比如
+function Person() { } var person = new Person() console.log(person.__proto__ === Person.prototype) // true 函数也是对象 普通对象是这样子的：
+var o1 = {} var o2 = new object() 凡是像下面代码使用 function 关键字或 Fucntion 构造函数创建的对象都是函数对象。只有函数对象才拥有 prototype （原型）对象。
+function f1 () {} var f2 = function (){} var f3 = new Function(&amp;#39;str&amp;#39;, &amp;#39;console.log(str)&amp;#39;) 构造函数和 prototype ECMAScript 中提供了构造函数来创建新对象。构造函数本身就是一个函数，它和普通函数没有任何的区别。
+前面示例代码中的 Person 就是一个构造函数，首字母大写并不是它被称为构造函数的原因，这是管理，但不是必须的。
+而是因为函数被 new 关键字调用时就是构造函数。
+那么当 Person 构造函数被 new 关键字调用的时候都发生了什么呢？</description>
+    </item>
+    
+  </channel>
+</rss>

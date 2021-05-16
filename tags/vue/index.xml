@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vue on Two Cold</title>
+    <link>https://vdorchan.github.io/tags/vue/</link>
+    <description>Recent content in Vue on Two Cold</description>
+    <image>
+      <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
+      <link><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Apr 2019 11:14:24 +0000</lastBuildDate><atom:link href="https://vdorchan.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 vue 开发项目遇到的问题总结</title>
+      <link>https://vdorchan.github.io/posts/vue-ken/</link>
+      <pubDate>Fri, 19 Apr 2019 11:14:24 +0000</pubDate>
+      
+      <guid>https://vdorchan.github.io/posts/vue-ken/</guid>
+      <description>开发的项目为：https://github.com/vdorchan/vue-movie，最初使用 vue-cli 2 作为脚手架工具，后又使用 vue-cli 3 重构。
+开发过程还是遇到了一些问题，现在试着回想并记录下来。
+1、请求接口跨域 接口跨域可以通过 webpack 配置 API 代理解决
+webpack 是借助 webpack-dev-server 插件提供开发服务器的，而 webpack-dev-server 使用 http-proxy-middleware 实现跨域代理。
+const devWebpackConfig = merge(baseWebpackConfig, { // ...  devServer: { // ...  proxy: { &amp;#39;/api&amp;#39;: { target: &amp;#39;http://api.douban.com/v2&amp;#39;, // 代理的API地址，就是需要跨域的API地址  changeOrigin: true, // 代理的API地址如果是域名就要加这个  pathRewrite: { &amp;#39;^/api&amp;#39;: &amp;#39;&amp;#39;, }, } } } }) 上面代码涉及到的参数说明：
+ target 为代理的API地址，就是需要跨域的API地址 代理的API地址如果是域名就要加多个参数 changeOrigin: true pathRewrite 是路径重写，也就是说会修改最终请求的API路径，原本访问的是 http://api.douban.com/v2/api/xx，上面代码重写路径后最终访问 http://api.douban.com/v2/xx  2、第二次进入页面不刷新 应用使用了 vue-router，为了避免每次路由变化的时候都重新渲染组件，便配合用上了 keep-alive 组件。</description>
+    </item>
+    
+  </channel>
+</rss>
