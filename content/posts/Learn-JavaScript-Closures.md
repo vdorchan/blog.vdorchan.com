@@ -2,7 +2,6 @@
 title: 学习 JavaScript 的闭包（翻译）
 date: 2017-12-13 15:00:00
 tags: 
-  - JavaScript
   - 翻译
   - 闭包
 ---

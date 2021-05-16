@@ -3,8 +3,6 @@ title: Learn-ES6-Class
 date: 2018-03-08 16:49:47
 tags: 
   - ES6
-  - 学习
-  - class
   - ES6学习笔记
 ---
 ## 1.简介

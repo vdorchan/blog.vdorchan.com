@@ -3,8 +3,6 @@ title: Learn-ES6-generator
 date: 2018-02-26 11:48:36
 tags: 
   - ES6
-  - 学习
-  - generator
   - ES6学习笔记
 ---
 ## 1. generator

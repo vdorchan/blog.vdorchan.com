@@ -3,8 +3,6 @@ title: 通过 certbot 给网站部署 Let’s Encrypt SSL 安全证书
 date: 2019-04-01 12:12:28
 tags:
   - 网站部署
-  - HTTPS
-  - Let’s Encrypt
 ---
 
 ## http 不安全

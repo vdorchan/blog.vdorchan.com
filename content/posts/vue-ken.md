@@ -2,8 +2,8 @@
 title: 使用 vue 开发项目遇到的问题总结
 date: 2019-04-19 11:14:24
 tags:
-  - Vue.js
-  - 问题
+  - Vue
+  - 总结
 ---
 
 开发的项目为：[https://github.com/vdorchan/vue-movie](https://github.com/vdorchan/vue-movie)，最初使用 vue-cli 2 作为脚手架工具，后又使用 vue-cli 3 重构。

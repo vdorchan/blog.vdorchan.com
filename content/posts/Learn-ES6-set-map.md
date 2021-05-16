@@ -3,9 +3,6 @@ title: Learn-ES6-set-map
 date: 2018-02-24 09:59:34
 tags: 
   - ES6
-  - 学习
-  - Set
-  - Map
   - ES6学习笔记
 ---
 ## 1.Set

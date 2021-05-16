@@ -3,9 +3,6 @@ title: Learn-ES6-class-extends
 date: 2018-03-09 10:21:28
 tags: 
   - ES6
-  - 学习
-  - class
-  - extends
   - ES6学习笔记
 ---
 
