@@ -25,7 +25,7 @@
 pnpm 同样是用来作为 npm 的替代，它不会去计算包的嵌套关系，并且通过硬连接将 NODE_MODULES内的文件指向机器内的一个全局存储目录，这样同一个模块只需要安装一次。安装方式很简单，比如通过脚本安装：
 macOS, Linux 等系统
 curl -f https://get.pnpm.io/v6.js | node - add --global pnpm Windows (使用 PowerShell):
-(Invoke-WebRequest &#39;https://get.pnpm.io/v6.js&#39; -UseBasicParsing).Content | node - add --global pnpm 安装后，就像npm install一样，使用pnpm install即可。</description>
+(Invoke-WebRequest &amp;#39;https://get.pnpm.io/v6.js&amp;#39; -UseBasicParsing).Content | node - add --global pnpm 安装后，就像npm install一样，使用pnpm install即可。</description>
     </item>
     
   </channel>

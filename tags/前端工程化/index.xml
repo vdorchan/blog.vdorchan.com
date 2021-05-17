@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端工程化 on Two Cold</title>
+    <link>https://vdorchan.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/</link>
+    <description>Recent content in 前端工程化 on Two Cold</description>
+    <image>
+      <url><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></url>
+      <link><https://cdn.nlark.com/yuque/0/2021/png/376315/1618928111859-91bbc46e-c8b2-414b-ab1d-5d78d250fb46.png, twitter-cards></link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Mar 2020 16:33:39 +0000</lastBuildDate><atom:link href="https://vdorchan.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>前端模块化</title>
+      <link>https://vdorchan.github.io/posts/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
+      <pubDate>Sun, 22 Mar 2020 16:33:39 +0000</pubDate>
+      
+      <guid>https://vdorchan.github.io/posts/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
+      <description>模块化的理解 模块化这件事，无论在哪个编程领域都是相当常见的事情，模块化存在的意义就是为了增加可复用性，以尽可能少的代码是实现个性化的需求。
+模块化的计划进程  全局 function 模式：将不同的功能封装成不同的全局函数  function myModule1 () {} function myModule2 () {}  namespace模式：简单对象封装  let myModule = { msg: &#39;hello world&#39;, say() { console.log(this.msg) } }  IIFE模式：匿名函数自调用  // myModule.js ;(function (window) { let msg = &#39;hello world&#39; function say () { console.log(msg) } window.myModule = { say } })(window) // 另一个js myModule.say()  IIFE模式增强：引入依赖（现代模块实现的基石）  ;(function (window, $) { let msg = &#39;hello world&#39; function say () { $(&#39;body&#39;).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -25,7 +25,7 @@
 pnpm 同样是用来作为 npm 的替代，它不会去计算包的嵌套关系，并且通过硬连接将 NODE_MODULES内的文件指向机器内的一个全局存储目录，这样同一个模块只需要安装一次。安装方式很简单，比如通过脚本安装：
 macOS, Linux 等系统
 curl -f https://get.pnpm.io/v6.js | node - add --global pnpm Windows (使用 PowerShell):
-(Invoke-WebRequest &#39;https://get.pnpm.io/v6.js&#39; -UseBasicParsing).Content | node - add --global pnpm 安装后，就像npm install一样，使用pnpm install即可。</description>
+(Invoke-WebRequest &amp;#39;https://get.pnpm.io/v6.js&amp;#39; -UseBasicParsing).Content | node - add --global pnpm 安装后，就像npm install一样，使用pnpm install即可。</description>
     </item>
     
     <item>
@@ -62,6 +62,16 @@ var createDiv = (function () { var div return function () { if (!div) { div = do
       <description>基础知识
  前言  设计模式是在某种场合下对某个问题的一种解决方案。 在我们试图解决一些问题的时候，说不定别人也遇到过一样的问题，并且把他们整理成了模式，提供了一种通用的解决方案。 设计模式实际上是解决某一种问题的一种思想，与具体的语言无关。 除了主流的面向对象语言，在函数式的语言中，设计模式依然存在。 一些设计模式的实现会因为语言的不同而不同。 软件的成本并非全部在开发阶段，虽然设计模式可能会增加复杂度，或带来一些额外的代码，但它会让人们写出可复用和可维护性高的程序。 所有设计模式的实现遵循一条原则：“找出程序中变化的地方，并将变化封装起来”。 很多模式的类图和结构很相似但不重要，辨别模式的关键是这个模式出现的场景，以及帮助我们解决了什么问题。   一、面向对象的 JavaScript  JavaScript 没有提供传统面向对象语言中的类式继承，而是通过原型委托的方式来实现对象与对象之间的继承。 ES6 的 class 是语法糖。
  编程语言类型和鸭子类型  编程语言按照数据类型大体可以分为两类，一类是**_静态类型语言_**，另一类是**_动态类型语言_**。**_静态类型语言_**在编译时便以确定变量的类型，而**_动态类型语言_**要到程序运行的时候，待变量被赋予某个值之后，才会具有某种类型。** **静态类型语言**的优点是可以提早发现错误，编译器可以针对这些数据类型的信息做一些优化。缺点是强契约不够灵活。 _动态类型语言_的优点是简洁代码量少，缺点是有些类型相关的错误可能到运行的时候才能知道。 JS 是_**动态类型语言。**_ _鸭子类型_强调关注对象的行为，而不是对象本身。动态类型语言 不必借助超类型的帮助，假如一个对象正确实现了 push 和 pop 方法，那它就可以被当作栈来使用。  多态  多态的思想是把“做什么”和“谁去做”分离开来。下面代码，我们不关注传进来的是那种对象，只要它有 makeSound 方法。  // 不变的部分 function makeSound (animal) { animal.sound() } // 可变的部分 const Duck = function () {} Duck.prototype.sound = function () { console.log(&amp;#39;嘎嘎嘎&amp;#39;) } const Chicken = function () {} Chicken.</description>
+    </item>
+    
+    <item>
+      <title>前端模块化</title>
+      <link>https://vdorchan.github.io/posts/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
+      <pubDate>Sun, 22 Mar 2020 16:33:39 +0000</pubDate>
+      
+      <guid>https://vdorchan.github.io/posts/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
+      <description>模块化的理解 模块化这件事，无论在哪个编程领域都是相当常见的事情，模块化存在的意义就是为了增加可复用性，以尽可能少的代码是实现个性化的需求。
+模块化的计划进程  全局 function 模式：将不同的功能封装成不同的全局函数  function myModule1 () {} function myModule2 () {}  namespace模式：简单对象封装  let myModule = { msg: &#39;hello world&#39;, say() { console.log(this.msg) } }  IIFE模式：匿名函数自调用  // myModule.js ;(function (window) { let msg = &#39;hello world&#39; function say () { console.log(msg) } window.myModule = { say } })(window) // 另一个js myModule.say()  IIFE模式增强：引入依赖（现代模块实现的基石）  ;(function (window, $) { let msg = &#39;hello world&#39; function say () { $(&#39;body&#39;).</description>
     </item>
     
     <item>
