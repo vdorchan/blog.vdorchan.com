@@ -10,7 +10,36 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 May 2021 15:22:13 +0000</lastBuildDate><atom:link href="https://vdorchan.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Jul 2021 00:49:29 +0800</lastBuildDate><atom:link href="https://vdorchan.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>V8 垃圾回收笔记</title>
+      <link>https://vdorchan.github.io/posts/v8-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 05 Jul 2021 00:49:29 +0800</pubDate>
+      
+      <guid>https://vdorchan.github.io/posts/v8-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AC%94%E8%AE%B0/</guid>
+      <description>为何需要垃圾回收 JS的垃圾回收系统会自动进行，为了让系统可以重复利用内存，避免内存暴增
+V8引擎的内存限制 为了减少性能引起的影响，基于以下两点的原因，限制了V8引擎的内存大小。
+node 可以手动设置。
+• 因为JS单线程，垃圾回收会阻碍主线程逻辑 • 垃圾回收本身耗时
+V8的内存结构 对象开始都会分配在**新生代（new_space）**中，该区域由两个半空间（semispace）构成。
+一个处于激活状态的From空间，一个处于未激活的To空间。
+当进行垃圾回收时，From中的空闲对象被自动回收，存活对象则被复制到To空间。
+复制完成后，From变成To，To变成From。
+这个过程用了 Scavenge算法。
+当：
+ 对象经历过一次 Scavenge算法 To的内存空间超过了 25%  对象就会进入到老生代中，这个过程叫对象晋升。
+在老生代中，采用新的算法Mark-Sweep（标记清除）和Mark-Compact（标记整理）来进行管理。
+引用计数 有个已经被淘汰的算法叫引用计数，当没有对象饮用的时候，该对象就会被回收。
+但当出现循环引用的时候，垃圾回收器无法正确清除对象引用，容易发生内存泄漏。
+Mark-Sweep Mark-Sweep会从根结点出发，遍历访问所有可以访问到的子节点，并将其标记为活动的，非活动的则直接清除。 根结点包括
+• 全局对象 • 本地函数的局部变量和参数 • 当前嵌套调用链上的其他函数的变量和参数
+Mark-Compact 经历过Mark-Sweep之后，因为清理的内存地址不是连续的，所以会出现内存碎片。
+Mark-Compact 算法就是为了解决这种内存碎片。
+它会将标记的活动对象都推到内存的一端，然后回收另一端的非活动对象。
+弱引用 WeakSet 和 WeakMap 中的键名所引用的对象都是弱引用，在垃圾回收的工程中，不会将键名对该对象的引用考虑进去。 适合存储Dom节点。
+参考：https://juejin.cn/post/6844904016325902344</description>
+    </item>
+    
     <item>
       <title>React项目优化的最佳实践</title>
       <link>https://vdorchan.github.io/posts/react%E9%A1%B9%E7%9B%AE%E4%BC%98%E5%8C%96%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
