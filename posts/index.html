@@ -19,7 +19,23 @@ Mark-Compact 经历过Mark-Sweep之后，因为清理的内存地址不是连续
 Mark-Compact 算法就是为了解决这种内存碎片。
 它会将标记的活动对象都推到内存的一端，然后回收另一端的非活动对象。
 弱引用 WeakSet 和 WeakMap 中的键名所引用的对象都是弱引用，在垃圾回收的工程中，不会将键名对该对象的引用考虑进去。 适合存储Dom节点。
-参考：https://juejin.cn/post/6844904016325902344</p></section><footer class=entry-footer>July 5, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;vdorchan</footer><a class=entry-link aria-label="post link to V8 垃圾回收笔记" href=https://vdorchan.github.io/posts/v8-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AC%94%E8%AE%B0/></a></article><article class=post-entry><header class=entry-header><h2>React项目优化的最佳实践</h2></header><section class=entry-content><p>构建优化及开发体验 旧项目使用了 antd-design-pro，基于 umi 框架，umi 是一个整合了多个技术栈的框架，如状态管理、路由、webpack打包等。对于开发者来说，这些功能的初始化和具体配置被封装起来，开箱即用确实方便。但这么一个黑箱，除了通过官方提供的配置，我几乎无法有更进一步调整。
+参考：https://juejin.cn/post/6844904016325902344</p></section><footer class=entry-footer>July 5, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;vdorchan</footer><a class=entry-link aria-label="post link to V8 垃圾回收笔记" href=https://vdorchan.github.io/posts/v8-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AC%94%E8%AE%B0/></a></article><article class=post-entry><header class=entry-header><h2>缓存总结</h2></header><section class=entry-content><p>浏览器在加载资源时，根据请求头的expires和cache-control判断是否命中强缓存，是则直接从缓存读取资源，不会发请求到服务器。
+如果没有命中强缓存，浏览器一定会发送一个请求到服务器，通过last-modified和etag验证资源是否命中协商缓存，如果命中，服务器会将这个请求返回，但是不会返回这个资源的数据，依然是从缓存中读取资源
+如果前面两者都没有命中，直接从服务器加载资源
+相同点 如果命中，都是从客户端缓存中加载资源，而不是从服务器加载资源数据；
+#### 不同点 强缓存不发请求到服务器
+协商缓存会发请求到服务器。
+强制缓存 Cache-Control: no-store：没有缓存。缓存中不得存储任何关于客户端请求和服务端响应的内容。每次由客户端发起的请求都会下载完整的响应内容。
+Cache-Control: no-cache：缓存但每次都验证。带着相关验证字段将请求发送到服务器。服务器会验证所描述的缓存是否过期。若未过期（304 NOT MODIFIED），则使用本地缓存。
+私有和共有 Cache-Control: public：可以被所有用户缓存（多用户共享），包括终端和CDN等中间代理服务器 Cache-Control: private：只能被终端浏览器缓存（而且是私有缓存），不允许中继缓存服务器进行缓存。
+过期 Cache-Control: max-age=&lt;seconds>：表示资源能够被缓存（保持新鲜）的最大时间。
+验证方式 Cache-Control: must-revalidate：意味着缓存在考虑使用一个陈旧的资源时，必须先验证它的状态，已过期的缓存将不被使用。
+Pragma 头 Pragma 是HTTP/1.0标准中定义的一个header属性，请求中包含Pragma的效果跟在头信息中定义Cache-Control: no-cache相同，但是HTTP的响应头没有明确定义这个属性，所以它不能拿来完全替代HTTP/1.1中定义的Cache-control头。通常定义Pragma以向后兼容基于HTTP/1.0的客户端。
+协商缓存 用户点击刷新按钮时会开始缓存验证。如果缓存的响应头信息里含有"Cache-control: must-revalidate”的定义，在浏览的过程中也会触发缓存验证。另外，在浏览器偏好设置里设置Advanced->Cache为强制验证缓存也能达到相同的效果。
+当缓存的文档过期后，需要进行缓存验证或者重新获取资源。只有在服务器返回强校验器或者弱校验器时才会进行验证。
+强校验器 ETag If-None-Match 响应头：Etag
+请求头：If-None-Match
+If-None-Match: &lt;etag_value> If-None-Match: &lt;etag_value>, &lt;etag_value>, … If-None-Match: * If-None-Match 是一个条件式请求首部。对于 GETGET 和 HEAD 请求方法来说，当且仅当服务器上没有任何资源的 ETag 属性值与这个首部中列出的相匹配的时候，服务器端会才返回所请求的资源，响应码为 200 。对于其他方法来说，当且仅当最终确认没有已存在的资源的 ETag 属性值与这个首部中所列出的相匹配的时候，才会对请求进行相应的处理。...</p></section><footer class=entry-footer>May 20, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;vdorchan</footer><a class=entry-link aria-label="post link to 缓存总结" href=https://vdorchan.github.io/posts/%E7%BC%93%E5%AD%98/></a></article><article class=post-entry><header class=entry-header><h2>React项目优化的最佳实践</h2></header><section class=entry-content><p>构建优化及开发体验 旧项目使用了 antd-design-pro，基于 umi 框架，umi 是一个整合了多个技术栈的框架，如状态管理、路由、webpack打包等。对于开发者来说，这些功能的初始化和具体配置被封装起来，开箱即用确实方便。但这么一个黑箱，除了通过官方提供的配置，我几乎无法有更进一步调整。
 于是我移除了 umi，转而使用 webpack 5 从零搭起一个开发环境，过程花了不少时间去反复读文档，了解最佳实践，踩了不少坑。然而结果还是不错的，最新的技术可以带来不错的效益，实践过后也沉淀了一些东西。
 依赖安装 - pnpm 与 yarn pnp npm3 维护了一个扁平的依赖结构，虽然解决 npm2 的嵌套关系过深的问题，这也使得 Node_modules文件夹变得混乱。想必身为前端基本都苦 npm 久矣，每次安装，除了网络问题，数量繁多的小文件读写，也使得这个过程艰难险阻。
 后来 Facebook 带来了 Yarn，它提供了一些更好的体验，比如 lock 文件、更好的缓存控制等。但其并没有改变巨大的NODE_MODULES目录。你的电脑依然要消耗空间去存储很多重复的模块。
@@ -51,12 +67,7 @@ display 属性： 像 block、inline 或者 inline-block 这样的标准值可�
 选择合适的尺寸 使用 CSS3 效果和网页字体代替图像 由于人眼的工作方式的缘故，可以适当进行有损压缩 假如浏览器支持，可以使用 WebP 和 JPEG XR 等压缩率更高的新格式 使用 &lt;picture> 和 &lt;img srcset> 实现响应式图片使用 &lt;picture> 和 &lt;img srcset> 来完成。给 img 或设置了 background 的 CSS 属性的元素，将其设置为 display: none，并不能其阻止加载图片。 使用视频代替 GIF， 当使用视频代替动画 GIF 时，可以减小数据量，并可能减少系统资源的使用。 脚本优化
 减少重排（reflow）和重绘（repaint）操作 缓存 DOM 元素、DOM 列表长度 length、属性值 使用事件委托，避免批量绑定事件 尽量使用 ID 选择器，因为它一经找到就停止查找，而使用类选择器的话将遍历整个dom 移动端使用 touch 事件代替 click 事件，因为 click 有 300ms 延迟 使用节流（throttle）和防抖（debounce）函数减少性能消耗 HTML优化...</p></section><footer class=entry-footer>April 23, 2019&nbsp;·&nbsp;4 min&nbsp;·&nbsp;vdorchan</footer><a class=entry-link aria-label="post link to 前端性能优化与浏览器渲染" href=https://vdorchan.github.io/posts/frontend-performance-optimization/></a></article><article class=post-entry><header class=entry-header><h2>JavaScript 实现二分搜索和快速排序</h2></header><section class=entry-content><p>二分搜索 在计算机科学中，二分搜索（binary search）是一种在有序数组中查找某一特定元素的搜索算法。搜索过程从数组的中间元素开始，如果中间元素正好是要查找的元素，则搜索过程结束；如果某一特定元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半中查找，而且跟开始一样从中间元素开始比较。如果在某一步骤数组为空，则代表找不到。这种搜索算法每一次比较都使搜索范围缩小一半
 利用递归实现
-/** * 二分查找，递归实现 * @param {*} arr * @param {*} target * @param {*} low * @param {*} high */ function binarySearch(arr, target, low = 0, high = arr.length - 1) { if (low > high) { return -1 } const mid = parseInt((low + high) / 2) if (target &lt; arr[mid]) { return binarySearch(arr, target, low, mid - 1) } if (target > arr[mid]) { return binarySearch(arr, target, mid + 1, high) } return mid } 非递归实现...</p></section><footer class=entry-footer>April 22, 2019&nbsp;·&nbsp;2 min&nbsp;·&nbsp;vdorchan</footer><a class=entry-link aria-label="post link to JavaScript 实现二分搜索和快速排序" href=https://vdorchan.github.io/posts/binary-search/></a></article><article class=post-entry><header class=entry-header><h2>使用 vue 开发项目遇到的问题总结</h2></header><section class=entry-content><p>开发的项目为：https://github.com/vdorchan/vue-movie，最初使用 vue-cli 2 作为脚手架工具，后又使用 vue-cli 3 重构。
-开发过程还是遇到了一些问题，现在试着回想并记录下来。
-1、请求接口跨域 接口跨域可以通过 webpack 配置 API 代理解决
-webpack 是借助 webpack-dev-server 插件提供开发服务器的，而 webpack-dev-server 使用 http-proxy-middleware 实现跨域代理。
-const devWebpackConfig = merge(baseWebpackConfig, { // ... devServer: { // ... proxy: { '/api': { target: 'http://api.douban.com/v2', // 代理的API地址，就是需要跨域的API地址 changeOrigin: true, // 代理的API地址如果是域名就要加这个 pathRewrite: { '^/api': '', }, } } } }) 上面代码涉及到的参数说明：
-target 为代理的API地址，就是需要跨域的API地址 代理的API地址如果是域名就要加多个参数 changeOrigin: true pathRewrite 是路径重写，也就是说会修改最终请求的API路径，原本访问的是 http://api.douban.com/v2/api/xx，上面代码重写路径后最终访问 http://api.douban.com/v2/xx 2、第二次进入页面不刷新 应用使用了 vue-router，为了避免每次路由变化的时候都重新渲染组件，便配合用上了 keep-alive 组件。...</p></section><footer class=entry-footer>April 19, 2019&nbsp;·&nbsp;1 min&nbsp;·&nbsp;vdorchan</footer><a class=entry-link aria-label="post link to 使用 vue 开发项目遇到的问题总结" href=https://vdorchan.github.io/posts/vue-ken/></a></article><footer class=page-footer><nav class=pagination><a class=next href=https://vdorchan.github.io/posts/page/2/>Next Page »</a></nav></footer></main><footer class=footer><span>&copy; 2021 <a href=https://vdorchan.github.io/>Two Cold</a></span>
+/** * 二分查找，递归实现 * @param {*} arr * @param {*} target * @param {*} low * @param {*} high */ function binarySearch(arr, target, low = 0, high = arr.length - 1) { if (low > high) { return -1 } const mid = parseInt((low + high) / 2) if (target &lt; arr[mid]) { return binarySearch(arr, target, low, mid - 1) } if (target > arr[mid]) { return binarySearch(arr, target, mid + 1, high) } return mid } 非递归实现...</p></section><footer class=entry-footer>April 22, 2019&nbsp;·&nbsp;2 min&nbsp;·&nbsp;vdorchan</footer><a class=entry-link aria-label="post link to JavaScript 实现二分搜索和快速排序" href=https://vdorchan.github.io/posts/binary-search/></a></article><footer class=page-footer><nav class=pagination><a class=next href=https://vdorchan.github.io/posts/page/2/>Next Page »</a></nav></footer></main><footer class=footer><span>&copy; 2021 <a href=https://vdorchan.github.io/>Two Cold</a></span>
 <span>&#183;</span>
 <span>Powered by <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a></span>
 <span>&#183;</span>
