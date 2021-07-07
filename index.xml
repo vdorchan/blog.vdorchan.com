@@ -10,7 +10,25 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Jul 2021 00:49:29 +0800</lastBuildDate><atom:link href="https://vdorchan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jul 2021 14:32:53 +0800</lastBuildDate><atom:link href="https://vdorchan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>实现上传图片以及相关概念</title>
+      <link>https://vdorchan.github.io/posts/upload-pictures/</link>
+      <pubDate>Wed, 07 Jul 2021 14:32:53 +0800</pubDate>
+      
+      <guid>https://vdorchan.github.io/posts/upload-pictures/</guid>
+      <description>效果   &amp;lt;input type=&amp;quot;file&amp;quot;&amp;gt; 我们使用 &amp;lt;input type=&amp;quot;file&amp;quot;&amp;gt; 来允许用户选择文件。
+&amp;lt;!-- `accept=&amp;#34;image/*&amp;#34;` 表示只允许上传图片格式的文件。 --&amp;gt; &amp;lt;Input id=&amp;#34;addPic&amp;#34; type=&amp;#34;file&amp;#34; accept=&amp;#34;image/*&amp;#34; /&amp;gt; 监听 onchange 获取已选择图片的信息，files 包含了一列 File 对象的 FileList 对象。FileList 的行为像一个数组，所以你可以检查 length 属性来获得已选择文件的数量。
+每个 File 包含下列信息：
+name：文件名。
+lastModified：一个数字，指定文件最后一次修改的日期和时间，以 UNIX 新纪元（1970年1月1日午夜）以来的毫秒数表示。
+lastModifiedDate ：一个 Date 对象，表示文件最后一次修改的日期和时间。这被弃用，并且不应使用。使用 lastModified 作为替代。
+size：以字节数为单位的文件大小。
+type：文件的 MIME 类型。
+webkitRelativePath：一个字符串，指定了相对于在目录选择器中选择的基本目录的文件路径（即，一个设置了 webkitdirectory 属性的 file 选择器）。 这是非标准的，应该谨慎使用。
+document.getElement(&amp;#39;addPic&amp;#39;).onchange = function () { //  console.log(this.files) } 预览 可以将 File 对象转换为 Blob 或 base 64 显示在页面上。</description>
+    </item>
+    
     <item>
       <title>V8 垃圾回收笔记</title>
       <link>https://vdorchan.github.io/posts/v8-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AC%94%E8%AE%B0/</link>
